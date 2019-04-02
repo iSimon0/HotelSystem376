@@ -2,12 +2,9 @@
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
         If UsernameBox.Text = "iSimon" Then
             If PasswordBox.Text = "TestPass1" Then
-                Label1.Visible = False
-                Label2.Visible = False
-                Label3.Visible = False
-                UsernameBox.Visible = False
-                PasswordBox.Visible = False
-                LoginButton.Visible = False
+                Dim form As New HomePage
+                form.Show()
+                Me.Close()
             End If
         End If
 
