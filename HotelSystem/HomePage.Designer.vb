@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class HomePage
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class HomePage
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.HomeButton = New System.Windows.Forms.Button()
         Me.ResButton = New System.Windows.Forms.Button()
         Me.CheckInButton = New System.Windows.Forms.Button()
@@ -29,7 +30,7 @@ Partial Class HomePage
         Me.MaintenanceButton = New System.Windows.Forms.Button()
         Me.EmployeeButton = New System.Windows.Forms.Button()
         Me.LogoutButton = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.HomePanel = New System.Windows.Forms.Panel()
         Me.RefreshHomeInfo = New System.Windows.Forms.Button()
         Me.HomeTablePanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -48,8 +49,19 @@ Partial Class HomePage
         Me.CapacityOOOLabel = New System.Windows.Forms.Label()
         Me.NumDirtyLabel = New System.Windows.Forms.Label()
         Me.CleanLabel = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
+        Me.ReservationPanel = New System.Windows.Forms.Panel()
+        Me.HOTEL_DBDataSet = New HotelSystem.HOTEL_DBDataSet()
+        Me.ROOMSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ROOMSTableAdapter = New HotelSystem.HOTEL_DBDataSetTableAdapters.ROOMSTableAdapter()
+        Me.TableAdapterManager = New HotelSystem.HOTEL_DBDataSetTableAdapters.TableAdapterManager()
+        Me.ChkInPanel = New System.Windows.Forms.Panel()
+        Me.ChkOutPanel = New System.Windows.Forms.Panel()
+        Me.MaintenancePanel = New System.Windows.Forms.Panel()
+        Me.EmployeePanel = New System.Windows.Forms.Panel()
+        Me.HomePanel.SuspendLayout()
         Me.HomeTablePanel.SuspendLayout()
+        CType(Me.HOTEL_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ROOMSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'HomeButton
@@ -115,14 +127,14 @@ Partial Class HomePage
         Me.LogoutButton.Text = "Log out"
         Me.LogoutButton.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'HomePanel
         '
-        Me.Panel1.Controls.Add(Me.RefreshHomeInfo)
-        Me.Panel1.Controls.Add(Me.HomeTablePanel)
-        Me.Panel1.Location = New System.Drawing.Point(12, 42)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(575, 331)
-        Me.Panel1.TabIndex = 7
+        Me.HomePanel.Controls.Add(Me.RefreshHomeInfo)
+        Me.HomePanel.Controls.Add(Me.HomeTablePanel)
+        Me.HomePanel.Location = New System.Drawing.Point(12, 42)
+        Me.HomePanel.Name = "HomePanel"
+        Me.HomePanel.Size = New System.Drawing.Size(575, 331)
+        Me.HomePanel.TabIndex = 7
         '
         'RefreshHomeInfo
         '
@@ -165,6 +177,7 @@ Partial Class HomePage
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.HomeTablePanel.Size = New System.Drawing.Size(413, 163)
         Me.HomeTablePanel.TabIndex = 0
         '
@@ -314,12 +327,76 @@ Partial Class HomePage
         Me.CleanLabel.TabIndex = 15
         Me.CleanLabel.Text = "GET"
         '
+        'ReservationPanel
+        '
+        Me.ReservationPanel.Location = New System.Drawing.Point(12, 42)
+        Me.ReservationPanel.Name = "ReservationPanel"
+        Me.ReservationPanel.Size = New System.Drawing.Size(575, 331)
+        Me.ReservationPanel.TabIndex = 2
+        '
+        'HOTEL_DBDataSet
+        '
+        Me.HOTEL_DBDataSet.DataSetName = "HOTEL_DBDataSet"
+        Me.HOTEL_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ROOMSBindingSource
+        '
+        Me.ROOMSBindingSource.DataMember = "ROOMS"
+        Me.ROOMSBindingSource.DataSource = Me.HOTEL_DBDataSet
+        '
+        'ROOMSTableAdapter
+        '
+        Me.ROOMSTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CUSTOMERTableAdapter = Nothing
+        Me.TableAdapterManager.EMPLOYEETableAdapter = Nothing
+        Me.TableAdapterManager.EMPLY_PAY_TABLETableAdapter = Nothing
+        Me.TableAdapterManager.MANAGEMENTTableAdapter = Nothing
+        Me.TableAdapterManager.ROOMSTableAdapter = Me.ROOMSTableAdapter
+        Me.TableAdapterManager.UpdateOrder = HotelSystem.HOTEL_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ChkInPanel
+        '
+        Me.ChkInPanel.Location = New System.Drawing.Point(12, 42)
+        Me.ChkInPanel.Name = "ChkInPanel"
+        Me.ChkInPanel.Size = New System.Drawing.Size(575, 331)
+        Me.ChkInPanel.TabIndex = 0
+        '
+        'ChkOutPanel
+        '
+        Me.ChkOutPanel.Location = New System.Drawing.Point(12, 41)
+        Me.ChkOutPanel.Name = "ChkOutPanel"
+        Me.ChkOutPanel.Size = New System.Drawing.Size(575, 332)
+        Me.ChkOutPanel.TabIndex = 0
+        '
+        'MaintenancePanel
+        '
+        Me.MaintenancePanel.Location = New System.Drawing.Point(12, 41)
+        Me.MaintenancePanel.Name = "MaintenancePanel"
+        Me.MaintenancePanel.Size = New System.Drawing.Size(575, 332)
+        Me.MaintenancePanel.TabIndex = 0
+        '
+        'EmployeePanel
+        '
+        Me.EmployeePanel.Location = New System.Drawing.Point(12, 41)
+        Me.EmployeePanel.Name = "EmployeePanel"
+        Me.EmployeePanel.Size = New System.Drawing.Size(575, 332)
+        Me.EmployeePanel.TabIndex = 0
+        '
         'HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(602, 384)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.EmployeePanel)
+        Me.Controls.Add(Me.MaintenancePanel)
+        Me.Controls.Add(Me.ChkOutPanel)
+        Me.Controls.Add(Me.ChkInPanel)
+        Me.Controls.Add(Me.ReservationPanel)
+        Me.Controls.Add(Me.HomePanel)
         Me.Controls.Add(Me.LogoutButton)
         Me.Controls.Add(Me.EmployeeButton)
         Me.Controls.Add(Me.MaintenanceButton)
@@ -329,9 +406,11 @@ Partial Class HomePage
         Me.Controls.Add(Me.HomeButton)
         Me.Name = "HomePage"
         Me.Text = "Home"
-        Me.Panel1.ResumeLayout(False)
+        Me.HomePanel.ResumeLayout(False)
         Me.HomeTablePanel.ResumeLayout(False)
         Me.HomeTablePanel.PerformLayout()
+        CType(Me.HOTEL_DBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ROOMSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -343,7 +422,7 @@ Partial Class HomePage
     Friend WithEvents MaintenanceButton As Button
     Friend WithEvents EmployeeButton As Button
     Friend WithEvents LogoutButton As Button
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents HomePanel As Panel
     Friend WithEvents HomeTablePanel As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
@@ -362,4 +441,13 @@ Partial Class HomePage
     Friend WithEvents CapacityOOOLabel As Label
     Friend WithEvents NumDirtyLabel As Label
     Friend WithEvents CleanLabel As Label
+    Friend WithEvents ReservationPanel As Panel
+    Friend WithEvents HOTEL_DBDataSet As HOTEL_DBDataSet
+    Friend WithEvents ROOMSBindingSource As BindingSource
+    Friend WithEvents ROOMSTableAdapter As HOTEL_DBDataSetTableAdapters.ROOMSTableAdapter
+    Friend WithEvents TableAdapterManager As HOTEL_DBDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ChkInPanel As Panel
+    Friend WithEvents ChkOutPanel As Panel
+    Friend WithEvents MaintenancePanel As Panel
+    Friend WithEvents EmployeePanel As Panel
 End Class
