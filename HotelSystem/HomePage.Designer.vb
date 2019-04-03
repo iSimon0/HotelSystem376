@@ -29,6 +29,27 @@ Partial Class HomePage
         Me.MaintenanceButton = New System.Windows.Forms.Button()
         Me.EmployeeButton = New System.Windows.Forms.Button()
         Me.LogoutButton = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RefreshHomeInfo = New System.Windows.Forms.Button()
+        Me.HomeTablePanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.DateLabel = New System.Windows.Forms.Label()
+        Me.NumChkInLabel = New System.Windows.Forms.Label()
+        Me.NumChkOutLabel = New System.Windows.Forms.Label()
+        Me.RoomRateLabel = New System.Windows.Forms.Label()
+        Me.CapacityLabel = New System.Windows.Forms.Label()
+        Me.CapacityOOOLabel = New System.Windows.Forms.Label()
+        Me.NumDirtyLabel = New System.Windows.Forms.Label()
+        Me.CleanLabel = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
+        Me.HomeTablePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'HomeButton
@@ -94,11 +115,211 @@ Partial Class HomePage
         Me.LogoutButton.Text = "Log out"
         Me.LogoutButton.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.RefreshHomeInfo)
+        Me.Panel1.Controls.Add(Me.HomeTablePanel)
+        Me.Panel1.Location = New System.Drawing.Point(12, 42)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(575, 331)
+        Me.Panel1.TabIndex = 7
+        '
+        'RefreshHomeInfo
+        '
+        Me.RefreshHomeInfo.Location = New System.Drawing.Point(293, 258)
+        Me.RefreshHomeInfo.Name = "RefreshHomeInfo"
+        Me.RefreshHomeInfo.Size = New System.Drawing.Size(201, 23)
+        Me.RefreshHomeInfo.TabIndex = 1
+        Me.RefreshHomeInfo.Text = "Get Today's Information"
+        Me.RefreshHomeInfo.UseVisualStyleBackColor = True
+        '
+        'HomeTablePanel
+        '
+        Me.HomeTablePanel.ColumnCount = 2
+        Me.HomeTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.HomeTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.HomeTablePanel.Controls.Add(Me.Label5, 0, 5)
+        Me.HomeTablePanel.Controls.Add(Me.Label4, 0, 4)
+        Me.HomeTablePanel.Controls.Add(Me.Label3, 0, 3)
+        Me.HomeTablePanel.Controls.Add(Me.Label2, 0, 2)
+        Me.HomeTablePanel.Controls.Add(Me.Label1, 0, 1)
+        Me.HomeTablePanel.Controls.Add(Me.Label7, 0, 0)
+        Me.HomeTablePanel.Controls.Add(Me.Label6, 0, 7)
+        Me.HomeTablePanel.Controls.Add(Me.Label8, 0, 6)
+        Me.HomeTablePanel.Controls.Add(Me.DateLabel, 1, 0)
+        Me.HomeTablePanel.Controls.Add(Me.NumChkInLabel, 1, 1)
+        Me.HomeTablePanel.Controls.Add(Me.NumChkOutLabel, 1, 2)
+        Me.HomeTablePanel.Controls.Add(Me.RoomRateLabel, 1, 3)
+        Me.HomeTablePanel.Controls.Add(Me.CapacityLabel, 1, 4)
+        Me.HomeTablePanel.Controls.Add(Me.CapacityOOOLabel, 1, 5)
+        Me.HomeTablePanel.Controls.Add(Me.NumDirtyLabel, 1, 6)
+        Me.HomeTablePanel.Controls.Add(Me.CleanLabel, 1, 7)
+        Me.HomeTablePanel.Location = New System.Drawing.Point(81, 76)
+        Me.HomeTablePanel.Name = "HomeTablePanel"
+        Me.HomeTablePanel.RowCount = 8
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.HomeTablePanel.Size = New System.Drawing.Size(413, 163)
+        Me.HomeTablePanel.TabIndex = 0
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(3, 100)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(127, 13)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Capacity w/ OOO Rooms"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 80)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(48, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Capacity"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 60)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Room Rate"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(3, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(114, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Check-outs Remaining"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(3, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(116, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Check-ins Guaranteed "
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(3, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(93, 13)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Hotel Statistics"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(3, 140)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(116, 13)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Clean Rooms Available"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(3, 120)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(64, 13)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "Dirty Rooms"
+        '
+        'DateLabel
+        '
+        Me.DateLabel.AutoSize = True
+        Me.DateLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateLabel.Location = New System.Drawing.Point(209, 0)
+        Me.DateLabel.Name = "DateLabel"
+        Me.DateLabel.Size = New System.Drawing.Size(32, 13)
+        Me.DateLabel.TabIndex = 8
+        Me.DateLabel.Text = "GET"
+        '
+        'NumChkInLabel
+        '
+        Me.NumChkInLabel.AutoSize = True
+        Me.NumChkInLabel.Location = New System.Drawing.Point(209, 20)
+        Me.NumChkInLabel.Name = "NumChkInLabel"
+        Me.NumChkInLabel.Size = New System.Drawing.Size(29, 13)
+        Me.NumChkInLabel.TabIndex = 9
+        Me.NumChkInLabel.Text = "GET"
+        '
+        'NumChkOutLabel
+        '
+        Me.NumChkOutLabel.AutoSize = True
+        Me.NumChkOutLabel.Location = New System.Drawing.Point(209, 40)
+        Me.NumChkOutLabel.Name = "NumChkOutLabel"
+        Me.NumChkOutLabel.Size = New System.Drawing.Size(29, 13)
+        Me.NumChkOutLabel.TabIndex = 10
+        Me.NumChkOutLabel.Text = "GET"
+        '
+        'RoomRateLabel
+        '
+        Me.RoomRateLabel.AutoSize = True
+        Me.RoomRateLabel.Location = New System.Drawing.Point(209, 60)
+        Me.RoomRateLabel.Name = "RoomRateLabel"
+        Me.RoomRateLabel.Size = New System.Drawing.Size(29, 13)
+        Me.RoomRateLabel.TabIndex = 11
+        Me.RoomRateLabel.Text = "GET"
+        '
+        'CapacityLabel
+        '
+        Me.CapacityLabel.AutoSize = True
+        Me.CapacityLabel.Location = New System.Drawing.Point(209, 80)
+        Me.CapacityLabel.Name = "CapacityLabel"
+        Me.CapacityLabel.Size = New System.Drawing.Size(29, 13)
+        Me.CapacityLabel.TabIndex = 12
+        Me.CapacityLabel.Text = "GET"
+        '
+        'CapacityOOOLabel
+        '
+        Me.CapacityOOOLabel.AutoSize = True
+        Me.CapacityOOOLabel.Location = New System.Drawing.Point(209, 100)
+        Me.CapacityOOOLabel.Name = "CapacityOOOLabel"
+        Me.CapacityOOOLabel.Size = New System.Drawing.Size(29, 13)
+        Me.CapacityOOOLabel.TabIndex = 13
+        Me.CapacityOOOLabel.Text = "GET"
+        '
+        'NumDirtyLabel
+        '
+        Me.NumDirtyLabel.AutoSize = True
+        Me.NumDirtyLabel.Location = New System.Drawing.Point(209, 120)
+        Me.NumDirtyLabel.Name = "NumDirtyLabel"
+        Me.NumDirtyLabel.Size = New System.Drawing.Size(29, 13)
+        Me.NumDirtyLabel.TabIndex = 14
+        Me.NumDirtyLabel.Text = "GET"
+        '
+        'CleanLabel
+        '
+        Me.CleanLabel.AutoSize = True
+        Me.CleanLabel.Location = New System.Drawing.Point(209, 140)
+        Me.CleanLabel.Name = "CleanLabel"
+        Me.CleanLabel.Size = New System.Drawing.Size(29, 13)
+        Me.CleanLabel.TabIndex = 15
+        Me.CleanLabel.Text = "GET"
+        '
         'HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(602, 384)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LogoutButton)
         Me.Controls.Add(Me.EmployeeButton)
         Me.Controls.Add(Me.MaintenanceButton)
@@ -108,6 +329,9 @@ Partial Class HomePage
         Me.Controls.Add(Me.HomeButton)
         Me.Name = "HomePage"
         Me.Text = "Home"
+        Me.Panel1.ResumeLayout(False)
+        Me.HomeTablePanel.ResumeLayout(False)
+        Me.HomeTablePanel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -119,4 +343,23 @@ Partial Class HomePage
     Friend WithEvents MaintenanceButton As Button
     Friend WithEvents EmployeeButton As Button
     Friend WithEvents LogoutButton As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents HomeTablePanel As TableLayoutPanel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents DateLabel As Label
+    Friend WithEvents RefreshHomeInfo As Button
+    Friend WithEvents NumChkInLabel As Label
+    Friend WithEvents NumChkOutLabel As Label
+    Friend WithEvents RoomRateLabel As Label
+    Friend WithEvents CapacityLabel As Label
+    Friend WithEvents CapacityOOOLabel As Label
+    Friend WithEvents NumDirtyLabel As Label
+    Friend WithEvents CleanLabel As Label
 End Class
