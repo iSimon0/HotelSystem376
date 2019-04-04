@@ -5,7 +5,7 @@
 
     Private Sub ResButton_Click(sender As Object, e As EventArgs) Handles ResButton.Click
         HomePanel.Visible = False
-        'ResPanel.Visible = True
+        ReservationPanel.Visible = True
     End Sub
 
     Private Sub LogoutButton_Click(sender As Object, e As EventArgs) Handles LogoutButton.Click
@@ -13,4 +13,5 @@
         form.Show()
         Me.Close()
     End Sub
+
 End Class

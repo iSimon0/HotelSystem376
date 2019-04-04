@@ -391,12 +391,12 @@ Partial Class HomePage
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(602, 384)
+        Me.Controls.Add(Me.HomePanel)
         Me.Controls.Add(Me.EmployeePanel)
         Me.Controls.Add(Me.MaintenancePanel)
         Me.Controls.Add(Me.ChkOutPanel)
         Me.Controls.Add(Me.ChkInPanel)
         Me.Controls.Add(Me.ReservationPanel)
-        Me.Controls.Add(Me.HomePanel)
         Me.Controls.Add(Me.LogoutButton)
         Me.Controls.Add(Me.EmployeeButton)
         Me.Controls.Add(Me.MaintenanceButton)
