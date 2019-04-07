@@ -25,7 +25,7 @@ Public Class HomePage
         ChkInPanel.Visible = False
         ReservationPanel.Visible = False
 
-        'Make the employee panel visible to user
+        'Make the Home panel visible to user
         EmployeePanel.Visible = True
 
 
@@ -34,6 +34,10 @@ Public Class HomePage
     End Sub
 
     Private Sub HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
+        Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
+        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
+        Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
         'TODO: This line of code loads data into the 'HOTEL_DBDataSet.EMPLOYEE' table. You can move, or remove it, as needed.
         '  Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
         'Turn off all other panels
@@ -55,7 +59,46 @@ Public Class HomePage
         ChkInPanel.Visible = False
         ReservationPanel.Visible = False
 
-        'Make the employee panel visible to user
+        'Make the Home panel visible to user
         HomePanel.Visible = True
+    End Sub
+
+    Private Sub CheckInButton_Click(sender As Object, e As EventArgs)
+        'Turn off all other panels
+        HomePanel.Visible = False
+        EmployeePanel.Visible = False
+        MaintenancePanel.Visible = False
+        ChkOutPanel.Visible = False
+        ReservationPanel.Visible = False
+
+        'Make the Check In panel visible to user
+        ChkInPanel.Visible = True
+
+    End Sub
+
+    Private Sub CheckOutButton_Click(sender As Object, e As EventArgs) Handles CheckOutButton.Click
+        'Turn off all other panels
+        HomePanel.Visible = False
+        EmployeePanel.Visible = False
+        MaintenancePanel.Visible = False
+        ChkInPanel.Visible = False
+        ReservationPanel.Visible = False
+
+        'Make the Check Out panel visible to user
+        ChkOutPanel.Visible = True
+
+    End Sub
+
+    Private Sub MaintenanceButton_Click(sender As Object, e As EventArgs) Handles MaintenanceButton.Click
+        'Turn off all other panels
+        HomePanel.Visible = False
+        EmployeePanel.Visible = False
+        ChkInPanel.Visible = False
+        ChkOutPanel.Visible = False
+        ReservationPanel.Visible = False
+
+        'Make the Maintenance panel visible to user
+        MaintenancePanel.Visible = True
+
     End Sub
 End Class
