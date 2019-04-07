@@ -1,7 +1,7 @@
 ﻿Public Class LoginPage
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
-        If UsernameBox.Text = "iSimon" Then
-            If PasswordBox.Text = "TestPass1" Then
+        If UsernameBox.Text = "name" Then
+            If PasswordBox.Text = "pass" Then
                 Dim form As New HomePage
                 form.Show()
                 Me.Close()
