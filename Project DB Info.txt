@@ -1,0 +1,2 @@
+ROOM
+	ROOM TYPES: single, double, triple, queen, king
