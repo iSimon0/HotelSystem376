@@ -4,6 +4,7 @@ Imports System.Configuration
 
 Public Class HomePage
 
+    'Con String used to hold source for connection to DB
     Const Con As String = "Provider=Microsoft.ACE.OLEDB.12.0;" &
             "Data Source=C:\Users\alsay\Documents\GitHub\HotelSystem376\HOTEL_DB.accdb"
 
@@ -23,11 +24,35 @@ Public Class HomePage
         Me.Close()
     End Sub
 
-    Private Sub EmployeeButton_Click(sender As Object, e As EventArgs) Handles EmployeeButton.Click
+    Private Sub HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.EMPLOYEE' table. You can move, or remove it, as needed.
+        Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
+        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
+        Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
+        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
+        Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
+        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.EMPLOYEE' table. You can move, or remove it, as needed.
+        Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
 
+
+
+        'Turn off all other panels
+        EmployeePanel.Visible = False
+        MaintenancePanel.Visible = False
+        ChkOutPanel.Visible = False
+        ChkInPanel.Visible = False
+        ReservationPanel.Visible = False
+
+        'Make the employee panel visible to user
+        HomePanel.Visible = True
+
+    End Sub
+
+    Private Sub EmployeeButton_Click(sender As Object, e As EventArgs) Handles EmployeeButton.Click
+        'Which table data will be pulled from
         Const SQLExpression As String = "SELECT * FROM EMPLOYEE;"
 
-
+        '*** CONNECTION
         Dim cn As New OleDbConnection(Con)
         cn.Open()
         Dim da As New OleDbDataAdapter(SQLExpression, cn)
@@ -45,6 +70,7 @@ Public Class HomePage
         ds = Nothing
         da.Dispose()
         cn = Nothing
+        '*** CONNECTION
 
         'Turn off all other panels
         HomePanel.Visible = False
@@ -58,28 +84,6 @@ Public Class HomePage
 
     End Sub
 
-    Private Sub HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.EMPLOYEE' table. You can move, or remove it, as needed.
-        Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
-        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
-        Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
-        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
-        Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
-        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.EMPLOYEE' table. You can move, or remove it, as needed.
-        Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
-
-
-        'Turn off all other panels
-        EmployeePanel.Visible = False
-        MaintenancePanel.Visible = False
-        ChkOutPanel.Visible = False
-        ChkInPanel.Visible = False
-        ReservationPanel.Visible = False
-
-        'Make the employee panel visible to user
-        HomePanel.Visible = True
-
-    End Sub
 
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
         'Turn off all other panels
@@ -93,20 +97,33 @@ Public Class HomePage
         HomePanel.Visible = True
     End Sub
 
-    Private Sub CheckInButton_Click(sender As Object, e As EventArgs)
-        'Turn off all other panels
-        HomePanel.Visible = False
-        EmployeePanel.Visible = False
-        MaintenancePanel.Visible = False
-        ChkOutPanel.Visible = False
-        ReservationPanel.Visible = False
 
-        'Make the Check In panel visible to user
-        ChkInPanel.Visible = True
-
-    End Sub
 
     Private Sub CheckOutButton_Click(sender As Object, e As EventArgs) Handles CheckOutButton.Click
+
+        'Which table data will be pulled from
+        Const SQLExpression As String = "SELECT * FROM CUSTOMER;"
+
+        '*** CONNECTION
+        Dim cn As New OleDbConnection(Con)
+        cn.Open()
+        Dim da As New OleDbDataAdapter(SQLExpression, cn)
+
+        Dim ds As New DataSet
+        da.Fill(ds, "CUSTOMER")
+        cn.Close()
+
+        With Me.CUSTOMERDataGridView
+            .DataSource = ds
+            'Here we control which table the DataGridView should display.
+            .DataMember = "CUSTOMER"
+        End With
+
+        ds = Nothing
+        da.Dispose()
+        cn = Nothing
+        '*** CONNECTION
+
         'Turn off all other panels
         HomePanel.Visible = False
         EmployeePanel.Visible = False
@@ -133,5 +150,38 @@ Public Class HomePage
     End Sub
 
 
+    Private Sub CheckInButton_Click(sender As Object, e As EventArgs) Handles CheckInButton.Click
+        'Which table data will be pulled from
+        Const SQLExpression As String = "SELECT * FROM CUSTOMER;"
 
+        '*** CONNECTION
+        Dim cn As New OleDbConnection(Con)
+        cn.Open()
+        Dim da As New OleDbDataAdapter(SQLExpression, cn)
+
+        Dim ds As New DataSet
+        da.Fill(ds, "CUSTOMER")
+        cn.Close()
+
+        With Me.CUSTOMERDataGridView1
+            .DataSource = ds
+            'Here we control which table the DataGridView should display.
+            .DataMember = "CUSTOMER"
+        End With
+
+        ds = Nothing
+        da.Dispose()
+        cn = Nothing
+        '*** CONNECTION
+
+        'Turn off all other panels
+        HomePanel.Visible = False
+        EmployeePanel.Visible = False
+        MaintenancePanel.Visible = False
+        ChkOutPanel.Visible = False
+        ReservationPanel.Visible = False
+
+        'Make the Check In panel visible to user
+        ChkInPanel.Visible = True
+    End Sub
 End Class

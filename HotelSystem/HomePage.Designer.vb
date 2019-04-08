@@ -67,33 +67,35 @@ Partial Class HomePage
         Me.HOTELDBDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HOTEL_DBDataSet = New HotelSystem.HOTEL_DBDataSet()
         Me.ChkInPanel = New System.Windows.Forms.Panel()
-        Me.DataGridChkInTbl = New System.Windows.Forms.DataGridView()
-        Me.FIRSTNAMEDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LASTNAMEDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CUSTIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DAYSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GUESTSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CHECKINDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CHECKOUTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TIMEINDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TIMEOUTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DATEOFORDERDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TOTALCOSTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PAIDDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.CUSTOMERDataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.CUSTOMERBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bttnUpdateCheckInTbl = New System.Windows.Forms.Button()
         Me.ChkOutPanel = New System.Windows.Forms.Panel()
-        Me.DataGridChkOutTbl = New System.Windows.Forms.DataGridView()
-        Me.FIRSTNAMEDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LASTNAMEDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CUSTIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DAYSDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GUESTSDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CHECKINDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CHECKOUTDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TIMEINDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TIMEOUTDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DATEOFORDERDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TOTALCOSTDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PAIDDataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.CUSTOMERDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.MaintenancePanel = New System.Windows.Forms.Panel()
         Me.DataGridMaintenanceTbl = New System.Windows.Forms.DataGridView()
         Me.ROOMDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -105,7 +107,16 @@ Partial Class HomePage
         Me.OCCUPANTIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ROOMSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmployeePanel = New System.Windows.Forms.Panel()
+        Me.bttnUpdateEmplyTbl = New System.Windows.Forms.Button()
         Me.DataGridEmplyTbl = New System.Windows.Forms.DataGridView()
+        Me.FIRSTNAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LASTNAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SSNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PHONEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TITLEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DEPTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PAYHRLYDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EMPLOYEEBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.EMPLOYEEBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.EMPLOYEEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ROOMSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
@@ -114,14 +125,7 @@ Partial Class HomePage
         Me.TableAdapterManager = New HotelSystem.HOTEL_DBDataSetTableAdapters.TableAdapterManager()
         Me.EMPLOYEETableAdapter = New HotelSystem.HOTEL_DBDataSetTableAdapters.EMPLOYEETableAdapter()
         Me.CUSTOMERTableAdapter = New HotelSystem.HOTEL_DBDataSetTableAdapters.CUSTOMERTableAdapter()
-        Me.EMPLOYEEBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FIRSTNAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LASTNAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SSNDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PHONEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TITLEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DEPTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PAYHRLYDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CUSTOMERBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.HomePanel.SuspendLayout()
         Me.HomeTablePanel.SuspendLayout()
         Me.ReservationPanel.SuspendLayout()
@@ -130,87 +134,82 @@ Partial Class HomePage
         CType(Me.HOTELDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HOTEL_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ChkInPanel.SuspendLayout()
-        CType(Me.DataGridChkInTbl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CUSTOMERDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CUSTOMERBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ChkOutPanel.SuspendLayout()
-        CType(Me.DataGridChkOutTbl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CUSTOMERDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaintenancePanel.SuspendLayout()
         CType(Me.DataGridMaintenanceTbl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ROOMSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EmployeePanel.SuspendLayout()
         CType(Me.DataGridEmplyTbl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EMPLOYEEBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMPLOYEEBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMPLOYEEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ROOMSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ROOMSBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EMPLOYEEBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CUSTOMERBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'HomeButton
         '
-        Me.HomeButton.Location = New System.Drawing.Point(16, 15)
-        Me.HomeButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.HomeButton.Location = New System.Drawing.Point(12, 12)
         Me.HomeButton.Name = "HomeButton"
-        Me.HomeButton.Size = New System.Drawing.Size(100, 28)
+        Me.HomeButton.Size = New System.Drawing.Size(75, 23)
         Me.HomeButton.TabIndex = 0
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
         '
         'ResButton
         '
-        Me.ResButton.Location = New System.Drawing.Point(124, 15)
-        Me.ResButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.ResButton.Location = New System.Drawing.Point(93, 12)
         Me.ResButton.Name = "ResButton"
-        Me.ResButton.Size = New System.Drawing.Size(107, 28)
+        Me.ResButton.Size = New System.Drawing.Size(80, 23)
         Me.ResButton.TabIndex = 1
         Me.ResButton.Text = "Reservations"
         Me.ResButton.UseVisualStyleBackColor = True
         '
         'CheckInButton
         '
-        Me.CheckInButton.Location = New System.Drawing.Point(239, 15)
-        Me.CheckInButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckInButton.Location = New System.Drawing.Point(179, 12)
         Me.CheckInButton.Name = "CheckInButton"
-        Me.CheckInButton.Size = New System.Drawing.Size(100, 28)
+        Me.CheckInButton.Size = New System.Drawing.Size(75, 23)
         Me.CheckInButton.TabIndex = 2
         Me.CheckInButton.Text = "Check-ins"
         Me.CheckInButton.UseVisualStyleBackColor = True
         '
         'CheckOutButton
         '
-        Me.CheckOutButton.Location = New System.Drawing.Point(347, 15)
-        Me.CheckOutButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckOutButton.Location = New System.Drawing.Point(260, 12)
         Me.CheckOutButton.Name = "CheckOutButton"
-        Me.CheckOutButton.Size = New System.Drawing.Size(100, 28)
+        Me.CheckOutButton.Size = New System.Drawing.Size(75, 23)
         Me.CheckOutButton.TabIndex = 3
         Me.CheckOutButton.Text = "Check-outs"
         Me.CheckOutButton.UseVisualStyleBackColor = True
         '
         'MaintenanceButton
         '
-        Me.MaintenanceButton.Location = New System.Drawing.Point(455, 15)
-        Me.MaintenanceButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaintenanceButton.Location = New System.Drawing.Point(341, 12)
         Me.MaintenanceButton.Name = "MaintenanceButton"
-        Me.MaintenanceButton.Size = New System.Drawing.Size(112, 28)
+        Me.MaintenanceButton.Size = New System.Drawing.Size(84, 23)
         Me.MaintenanceButton.TabIndex = 4
         Me.MaintenanceButton.Text = "Maintenance"
         Me.MaintenanceButton.UseVisualStyleBackColor = True
         '
         'EmployeeButton
         '
-        Me.EmployeeButton.Location = New System.Drawing.Point(575, 15)
-        Me.EmployeeButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.EmployeeButton.Location = New System.Drawing.Point(431, 12)
         Me.EmployeeButton.Name = "EmployeeButton"
-        Me.EmployeeButton.Size = New System.Drawing.Size(100, 28)
+        Me.EmployeeButton.Size = New System.Drawing.Size(75, 23)
         Me.EmployeeButton.TabIndex = 5
         Me.EmployeeButton.Text = "Employee"
         Me.EmployeeButton.UseVisualStyleBackColor = True
         '
         'LogoutButton
         '
-        Me.LogoutButton.Location = New System.Drawing.Point(683, 15)
-        Me.LogoutButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.LogoutButton.Location = New System.Drawing.Point(512, 12)
         Me.LogoutButton.Name = "LogoutButton"
-        Me.LogoutButton.Size = New System.Drawing.Size(100, 28)
+        Me.LogoutButton.Size = New System.Drawing.Size(75, 23)
         Me.LogoutButton.TabIndex = 6
         Me.LogoutButton.Text = "Log out"
         Me.LogoutButton.UseVisualStyleBackColor = True
@@ -219,19 +218,17 @@ Partial Class HomePage
         '
         Me.HomePanel.Controls.Add(Me.RefreshHomeInfo)
         Me.HomePanel.Controls.Add(Me.HomeTablePanel)
-        Me.HomePanel.Location = New System.Drawing.Point(12, 50)
-        Me.HomePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.HomePanel.Location = New System.Drawing.Point(9, 41)
         Me.HomePanel.Name = "HomePanel"
-        Me.HomePanel.Size = New System.Drawing.Size(771, 421)
+        Me.HomePanel.Size = New System.Drawing.Size(578, 342)
         Me.HomePanel.TabIndex = 7
         Me.HomePanel.Visible = False
         '
         'RefreshHomeInfo
         '
-        Me.RefreshHomeInfo.Location = New System.Drawing.Point(391, 318)
-        Me.RefreshHomeInfo.Margin = New System.Windows.Forms.Padding(4)
+        Me.RefreshHomeInfo.Location = New System.Drawing.Point(293, 258)
         Me.RefreshHomeInfo.Name = "RefreshHomeInfo"
-        Me.RefreshHomeInfo.Size = New System.Drawing.Size(268, 28)
+        Me.RefreshHomeInfo.Size = New System.Drawing.Size(201, 23)
         Me.RefreshHomeInfo.TabIndex = 1
         Me.RefreshHomeInfo.Text = "Get Today's Information"
         Me.RefreshHomeInfo.UseVisualStyleBackColor = True
@@ -257,8 +254,7 @@ Partial Class HomePage
         Me.HomeTablePanel.Controls.Add(Me.CapacityOOOLabel, 1, 5)
         Me.HomeTablePanel.Controls.Add(Me.NumDirtyLabel, 1, 6)
         Me.HomeTablePanel.Controls.Add(Me.CleanLabel, 1, 7)
-        Me.HomeTablePanel.Location = New System.Drawing.Point(108, 94)
-        Me.HomeTablePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.HomeTablePanel.Location = New System.Drawing.Point(81, 76)
         Me.HomeTablePanel.Name = "HomeTablePanel"
         Me.HomeTablePanel.RowCount = 8
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
@@ -269,57 +265,52 @@ Partial Class HomePage
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
-        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
-        Me.HomeTablePanel.Size = New System.Drawing.Size(551, 201)
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.HomeTablePanel.Size = New System.Drawing.Size(413, 163)
         Me.HomeTablePanel.TabIndex = 0
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(4, 125)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(3, 100)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(164, 17)
+        Me.Label5.Size = New System.Drawing.Size(127, 13)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Capacity w/ OOO Rooms"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(4, 100)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(3, 80)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 17)
+        Me.Label4.Size = New System.Drawing.Size(48, 13)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Capacity"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(4, 75)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(3, 60)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(79, 17)
+        Me.Label3.Size = New System.Drawing.Size(61, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Room Rate"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(4, 50)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(3, 40)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(150, 17)
+        Me.Label2.Size = New System.Drawing.Size(114, 13)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Check-outs Remaining"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(4, 25)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(3, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(154, 17)
+        Me.Label1.Size = New System.Drawing.Size(116, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Check-ins Guaranteed "
         '
@@ -327,30 +318,27 @@ Partial Class HomePage
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(4, 0)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(3, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(117, 17)
+        Me.Label7.Size = New System.Drawing.Size(93, 13)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Hotel Statistics"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(4, 175)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(3, 140)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(153, 17)
+        Me.Label6.Size = New System.Drawing.Size(116, 13)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Clean Rooms Available"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(4, 150)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(3, 120)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(85, 17)
+        Me.Label8.Size = New System.Drawing.Size(64, 13)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Dirty Rooms"
         '
@@ -358,90 +346,81 @@ Partial Class HomePage
         '
         Me.DateLabel.AutoSize = True
         Me.DateLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateLabel.Location = New System.Drawing.Point(279, 0)
-        Me.DateLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.DateLabel.Location = New System.Drawing.Point(209, 0)
         Me.DateLabel.Name = "DateLabel"
-        Me.DateLabel.Size = New System.Drawing.Size(40, 17)
+        Me.DateLabel.Size = New System.Drawing.Size(32, 13)
         Me.DateLabel.TabIndex = 8
         Me.DateLabel.Text = "GET"
         '
         'NumChkInLabel
         '
         Me.NumChkInLabel.AutoSize = True
-        Me.NumChkInLabel.Location = New System.Drawing.Point(279, 25)
-        Me.NumChkInLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.NumChkInLabel.Location = New System.Drawing.Point(209, 20)
         Me.NumChkInLabel.Name = "NumChkInLabel"
-        Me.NumChkInLabel.Size = New System.Drawing.Size(37, 17)
+        Me.NumChkInLabel.Size = New System.Drawing.Size(29, 13)
         Me.NumChkInLabel.TabIndex = 9
         Me.NumChkInLabel.Text = "GET"
         '
         'NumChkOutLabel
         '
         Me.NumChkOutLabel.AutoSize = True
-        Me.NumChkOutLabel.Location = New System.Drawing.Point(279, 50)
-        Me.NumChkOutLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.NumChkOutLabel.Location = New System.Drawing.Point(209, 40)
         Me.NumChkOutLabel.Name = "NumChkOutLabel"
-        Me.NumChkOutLabel.Size = New System.Drawing.Size(37, 17)
+        Me.NumChkOutLabel.Size = New System.Drawing.Size(29, 13)
         Me.NumChkOutLabel.TabIndex = 10
         Me.NumChkOutLabel.Text = "GET"
         '
         'RoomRateLabel
         '
         Me.RoomRateLabel.AutoSize = True
-        Me.RoomRateLabel.Location = New System.Drawing.Point(279, 75)
-        Me.RoomRateLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.RoomRateLabel.Location = New System.Drawing.Point(209, 60)
         Me.RoomRateLabel.Name = "RoomRateLabel"
-        Me.RoomRateLabel.Size = New System.Drawing.Size(37, 17)
+        Me.RoomRateLabel.Size = New System.Drawing.Size(29, 13)
         Me.RoomRateLabel.TabIndex = 11
         Me.RoomRateLabel.Text = "GET"
         '
         'CapacityLabel
         '
         Me.CapacityLabel.AutoSize = True
-        Me.CapacityLabel.Location = New System.Drawing.Point(279, 100)
-        Me.CapacityLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.CapacityLabel.Location = New System.Drawing.Point(209, 80)
         Me.CapacityLabel.Name = "CapacityLabel"
-        Me.CapacityLabel.Size = New System.Drawing.Size(37, 17)
+        Me.CapacityLabel.Size = New System.Drawing.Size(29, 13)
         Me.CapacityLabel.TabIndex = 12
         Me.CapacityLabel.Text = "GET"
         '
         'CapacityOOOLabel
         '
         Me.CapacityOOOLabel.AutoSize = True
-        Me.CapacityOOOLabel.Location = New System.Drawing.Point(279, 125)
-        Me.CapacityOOOLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.CapacityOOOLabel.Location = New System.Drawing.Point(209, 100)
         Me.CapacityOOOLabel.Name = "CapacityOOOLabel"
-        Me.CapacityOOOLabel.Size = New System.Drawing.Size(37, 17)
+        Me.CapacityOOOLabel.Size = New System.Drawing.Size(29, 13)
         Me.CapacityOOOLabel.TabIndex = 13
         Me.CapacityOOOLabel.Text = "GET"
         '
         'NumDirtyLabel
         '
         Me.NumDirtyLabel.AutoSize = True
-        Me.NumDirtyLabel.Location = New System.Drawing.Point(279, 150)
-        Me.NumDirtyLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.NumDirtyLabel.Location = New System.Drawing.Point(209, 120)
         Me.NumDirtyLabel.Name = "NumDirtyLabel"
-        Me.NumDirtyLabel.Size = New System.Drawing.Size(37, 17)
+        Me.NumDirtyLabel.Size = New System.Drawing.Size(29, 13)
         Me.NumDirtyLabel.TabIndex = 14
         Me.NumDirtyLabel.Text = "GET"
         '
         'CleanLabel
         '
         Me.CleanLabel.AutoSize = True
-        Me.CleanLabel.Location = New System.Drawing.Point(279, 175)
-        Me.CleanLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.CleanLabel.Location = New System.Drawing.Point(209, 140)
         Me.CleanLabel.Name = "CleanLabel"
-        Me.CleanLabel.Size = New System.Drawing.Size(37, 17)
+        Me.CleanLabel.Size = New System.Drawing.Size(29, 13)
         Me.CleanLabel.TabIndex = 15
         Me.CleanLabel.Text = "GET"
         '
         'ReservationPanel
         '
         Me.ReservationPanel.Controls.Add(Me.DataGridCustoTbl)
-        Me.ReservationPanel.Location = New System.Drawing.Point(13, 51)
-        Me.ReservationPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.ReservationPanel.Location = New System.Drawing.Point(10, 41)
         Me.ReservationPanel.Name = "ReservationPanel"
-        Me.ReservationPanel.Size = New System.Drawing.Size(770, 420)
+        Me.ReservationPanel.Size = New System.Drawing.Size(578, 341)
         Me.ReservationPanel.TabIndex = 2
         Me.ReservationPanel.Visible = False
         '
@@ -452,9 +431,10 @@ Partial Class HomePage
         Me.DataGridCustoTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FIRSTNAMEDataGridViewTextBoxColumn3, Me.LASTNAMEDataGridViewTextBoxColumn3, Me.CUSTIDDataGridViewTextBoxColumn2, Me.DAYSDataGridViewTextBoxColumn2, Me.GUESTSDataGridViewTextBoxColumn2, Me.CHECKINDataGridViewTextBoxColumn2, Me.CHECKOUTDataGridViewTextBoxColumn2, Me.TIMEINDataGridViewTextBoxColumn2, Me.TIMEOUTDataGridViewTextBoxColumn2, Me.DATEOFORDERDataGridViewTextBoxColumn2, Me.TOTALCOSTDataGridViewTextBoxColumn2, Me.PAIDDataGridViewCheckBoxColumn2})
         Me.DataGridCustoTbl.DataSource = Me.CUSTOMERBindingSource
         Me.DataGridCustoTbl.Location = New System.Drawing.Point(-1, -1)
+        Me.DataGridCustoTbl.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridCustoTbl.Name = "DataGridCustoTbl"
         Me.DataGridCustoTbl.RowTemplate.Height = 24
-        Me.DataGridCustoTbl.Size = New System.Drawing.Size(771, 411)
+        Me.DataGridCustoTbl.Size = New System.Drawing.Size(578, 334)
         Me.DataGridCustoTbl.TabIndex = 0
         '
         'FIRSTNAMEDataGridViewTextBoxColumn3
@@ -546,200 +526,208 @@ Partial Class HomePage
         '
         'ChkInPanel
         '
-        Me.ChkInPanel.Controls.Add(Me.DataGridChkInTbl)
-        Me.ChkInPanel.Location = New System.Drawing.Point(1, 1)
-        Me.ChkInPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.ChkInPanel.Controls.Add(Me.CUSTOMERDataGridView1)
+        Me.ChkInPanel.Controls.Add(Me.bttnUpdateCheckInTbl)
+        Me.ChkInPanel.Location = New System.Drawing.Point(12, 573)
         Me.ChkInPanel.Name = "ChkInPanel"
-        Me.ChkInPanel.Size = New System.Drawing.Size(770, 420)
+        Me.ChkInPanel.Size = New System.Drawing.Size(576, 395)
         Me.ChkInPanel.TabIndex = 0
-        Me.ChkInPanel.Visible = False
         '
-        'DataGridChkInTbl
+        'CUSTOMERDataGridView1
         '
-        Me.DataGridChkInTbl.AutoGenerateColumns = False
-        Me.DataGridChkInTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridChkInTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FIRSTNAMEDataGridViewTextBoxColumn1, Me.LASTNAMEDataGridViewTextBoxColumn1, Me.CUSTIDDataGridViewTextBoxColumn, Me.DAYSDataGridViewTextBoxColumn, Me.GUESTSDataGridViewTextBoxColumn, Me.CHECKINDataGridViewTextBoxColumn, Me.CHECKOUTDataGridViewTextBoxColumn, Me.TIMEINDataGridViewTextBoxColumn, Me.TIMEOUTDataGridViewTextBoxColumn, Me.DATEOFORDERDataGridViewTextBoxColumn, Me.TOTALCOSTDataGridViewTextBoxColumn, Me.PAIDDataGridViewCheckBoxColumn})
-        Me.DataGridChkInTbl.DataSource = Me.CUSTOMERBindingSource
-        Me.DataGridChkInTbl.Location = New System.Drawing.Point(-1, 0)
-        Me.DataGridChkInTbl.Name = "DataGridChkInTbl"
-        Me.DataGridChkInTbl.RowTemplate.Height = 24
-        Me.DataGridChkInTbl.Size = New System.Drawing.Size(771, 410)
-        Me.DataGridChkInTbl.TabIndex = 0
+        Me.CUSTOMERDataGridView1.AutoGenerateColumns = False
+        Me.CUSTOMERDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CUSTOMERDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewCheckBoxColumn2})
+        Me.CUSTOMERDataGridView1.DataSource = Me.CUSTOMERBindingSource2
+        Me.CUSTOMERDataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.CUSTOMERDataGridView1.Name = "CUSTOMERDataGridView1"
+        Me.CUSTOMERDataGridView1.Size = New System.Drawing.Size(576, 346)
+        Me.CUSTOMERDataGridView1.TabIndex = 1
         '
-        'FIRSTNAMEDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn12
         '
-        Me.FIRSTNAMEDataGridViewTextBoxColumn1.DataPropertyName = "FIRST_NAME"
-        Me.FIRSTNAMEDataGridViewTextBoxColumn1.HeaderText = "FIRST_NAME"
-        Me.FIRSTNAMEDataGridViewTextBoxColumn1.Name = "FIRSTNAMEDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "FIRST_NAME"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "FIRST_NAME"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
         '
-        'LASTNAMEDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn13
         '
-        Me.LASTNAMEDataGridViewTextBoxColumn1.DataPropertyName = "LAST_NAME"
-        Me.LASTNAMEDataGridViewTextBoxColumn1.HeaderText = "LAST_NAME"
-        Me.LASTNAMEDataGridViewTextBoxColumn1.Name = "LASTNAMEDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "LAST_NAME"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "LAST_NAME"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
         '
-        'CUSTIDDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn14
         '
-        Me.CUSTIDDataGridViewTextBoxColumn.DataPropertyName = "CUST_ID#"
-        Me.CUSTIDDataGridViewTextBoxColumn.HeaderText = "CUST_ID#"
-        Me.CUSTIDDataGridViewTextBoxColumn.Name = "CUSTIDDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "CUST_ID#"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "CUST_ID#"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
         '
-        'DAYSDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn15
         '
-        Me.DAYSDataGridViewTextBoxColumn.DataPropertyName = "DAYS"
-        Me.DAYSDataGridViewTextBoxColumn.HeaderText = "DAYS"
-        Me.DAYSDataGridViewTextBoxColumn.Name = "DAYSDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn15.DataPropertyName = "DAYS"
+        Me.DataGridViewTextBoxColumn15.HeaderText = "DAYS"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
         '
-        'GUESTSDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn16
         '
-        Me.GUESTSDataGridViewTextBoxColumn.DataPropertyName = "GUESTS"
-        Me.GUESTSDataGridViewTextBoxColumn.HeaderText = "GUESTS"
-        Me.GUESTSDataGridViewTextBoxColumn.Name = "GUESTSDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "GUESTS"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "GUESTS"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
         '
-        'CHECKINDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn17
         '
-        Me.CHECKINDataGridViewTextBoxColumn.DataPropertyName = "CHECKIN"
-        Me.CHECKINDataGridViewTextBoxColumn.HeaderText = "CHECKIN"
-        Me.CHECKINDataGridViewTextBoxColumn.Name = "CHECKINDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "CHECKIN"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "CHECKIN"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
         '
-        'CHECKOUTDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn18
         '
-        Me.CHECKOUTDataGridViewTextBoxColumn.DataPropertyName = "CHECKOUT"
-        Me.CHECKOUTDataGridViewTextBoxColumn.HeaderText = "CHECKOUT"
-        Me.CHECKOUTDataGridViewTextBoxColumn.Name = "CHECKOUTDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "CHECKOUT"
+        Me.DataGridViewTextBoxColumn18.HeaderText = "CHECKOUT"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
         '
-        'TIMEINDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn19
         '
-        Me.TIMEINDataGridViewTextBoxColumn.DataPropertyName = "TIME_IN"
-        Me.TIMEINDataGridViewTextBoxColumn.HeaderText = "TIME_IN"
-        Me.TIMEINDataGridViewTextBoxColumn.Name = "TIMEINDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn19.DataPropertyName = "TIME_IN"
+        Me.DataGridViewTextBoxColumn19.HeaderText = "TIME_IN"
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
         '
-        'TIMEOUTDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn20
         '
-        Me.TIMEOUTDataGridViewTextBoxColumn.DataPropertyName = "TIME_OUT"
-        Me.TIMEOUTDataGridViewTextBoxColumn.HeaderText = "TIME_OUT"
-        Me.TIMEOUTDataGridViewTextBoxColumn.Name = "TIMEOUTDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn20.DataPropertyName = "TIME_OUT"
+        Me.DataGridViewTextBoxColumn20.HeaderText = "TIME_OUT"
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
         '
-        'DATEOFORDERDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn21
         '
-        Me.DATEOFORDERDataGridViewTextBoxColumn.DataPropertyName = "DATE_OF_ORDER"
-        Me.DATEOFORDERDataGridViewTextBoxColumn.HeaderText = "DATE_OF_ORDER"
-        Me.DATEOFORDERDataGridViewTextBoxColumn.Name = "DATEOFORDERDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn21.DataPropertyName = "DATE_OF_ORDER"
+        Me.DataGridViewTextBoxColumn21.HeaderText = "DATE_OF_ORDER"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
         '
-        'TOTALCOSTDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn22
         '
-        Me.TOTALCOSTDataGridViewTextBoxColumn.DataPropertyName = "TOTAL_COST"
-        Me.TOTALCOSTDataGridViewTextBoxColumn.HeaderText = "TOTAL_COST"
-        Me.TOTALCOSTDataGridViewTextBoxColumn.Name = "TOTALCOSTDataGridViewTextBoxColumn"
+        Me.DataGridViewTextBoxColumn22.DataPropertyName = "TOTAL_COST"
+        Me.DataGridViewTextBoxColumn22.HeaderText = "TOTAL_COST"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
         '
-        'PAIDDataGridViewCheckBoxColumn
+        'DataGridViewCheckBoxColumn2
         '
-        Me.PAIDDataGridViewCheckBoxColumn.DataPropertyName = "PAID"
-        Me.PAIDDataGridViewCheckBoxColumn.HeaderText = "PAID"
-        Me.PAIDDataGridViewCheckBoxColumn.Name = "PAIDDataGridViewCheckBoxColumn"
+        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "PAID"
+        Me.DataGridViewCheckBoxColumn2.HeaderText = "PAID"
+        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        '
+        'CUSTOMERBindingSource2
+        '
+        Me.CUSTOMERBindingSource2.DataMember = "CUSTOMER"
+        Me.CUSTOMERBindingSource2.DataSource = Me.HOTEL_DBDataSet
+        '
+        'bttnUpdateCheckInTbl
+        '
+        Me.bttnUpdateCheckInTbl.Location = New System.Drawing.Point(25, 352)
+        Me.bttnUpdateCheckInTbl.Name = "bttnUpdateCheckInTbl"
+        Me.bttnUpdateCheckInTbl.Size = New System.Drawing.Size(75, 23)
+        Me.bttnUpdateCheckInTbl.TabIndex = 1
+        Me.bttnUpdateCheckInTbl.Text = "Update"
+        Me.bttnUpdateCheckInTbl.UseVisualStyleBackColor = True
         '
         'ChkOutPanel
         '
-        Me.ChkOutPanel.Controls.Add(Me.ChkInPanel)
-        Me.ChkOutPanel.Controls.Add(Me.DataGridChkOutTbl)
-        Me.ChkOutPanel.Location = New System.Drawing.Point(12, 50)
-        Me.ChkOutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.ChkOutPanel.Controls.Add(Me.CUSTOMERDataGridView)
+        Me.ChkOutPanel.Location = New System.Drawing.Point(713, 573)
         Me.ChkOutPanel.Name = "ChkOutPanel"
-        Me.ChkOutPanel.Size = New System.Drawing.Size(771, 421)
+        Me.ChkOutPanel.Size = New System.Drawing.Size(578, 393)
         Me.ChkOutPanel.TabIndex = 0
         Me.ChkOutPanel.Visible = False
         '
-        'DataGridChkOutTbl
+        'CUSTOMERDataGridView
         '
-        Me.DataGridChkOutTbl.AutoGenerateColumns = False
-        Me.DataGridChkOutTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridChkOutTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FIRSTNAMEDataGridViewTextBoxColumn2, Me.LASTNAMEDataGridViewTextBoxColumn2, Me.CUSTIDDataGridViewTextBoxColumn1, Me.DAYSDataGridViewTextBoxColumn1, Me.GUESTSDataGridViewTextBoxColumn1, Me.CHECKINDataGridViewTextBoxColumn1, Me.CHECKOUTDataGridViewTextBoxColumn1, Me.TIMEINDataGridViewTextBoxColumn1, Me.TIMEOUTDataGridViewTextBoxColumn1, Me.DATEOFORDERDataGridViewTextBoxColumn1, Me.TOTALCOSTDataGridViewTextBoxColumn1, Me.PAIDDataGridViewCheckBoxColumn1})
-        Me.DataGridChkOutTbl.DataSource = Me.CUSTOMERBindingSource
-        Me.DataGridChkOutTbl.Location = New System.Drawing.Point(0, 1)
-        Me.DataGridChkOutTbl.Name = "DataGridChkOutTbl"
-        Me.DataGridChkOutTbl.RowTemplate.Height = 24
-        Me.DataGridChkOutTbl.Size = New System.Drawing.Size(771, 410)
-        Me.DataGridChkOutTbl.TabIndex = 0
+        Me.CUSTOMERDataGridView.AutoGenerateColumns = False
+        Me.CUSTOMERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CUSTOMERDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewCheckBoxColumn1})
+        Me.CUSTOMERDataGridView.DataSource = Me.CUSTOMERBindingSource2
+        Me.CUSTOMERDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.CUSTOMERDataGridView.Name = "CUSTOMERDataGridView"
+        Me.CUSTOMERDataGridView.Size = New System.Drawing.Size(578, 309)
+        Me.CUSTOMERDataGridView.TabIndex = 0
         '
-        'FIRSTNAMEDataGridViewTextBoxColumn2
+        'DataGridViewTextBoxColumn1
         '
-        Me.FIRSTNAMEDataGridViewTextBoxColumn2.DataPropertyName = "FIRST_NAME"
-        Me.FIRSTNAMEDataGridViewTextBoxColumn2.HeaderText = "FIRST_NAME"
-        Me.FIRSTNAMEDataGridViewTextBoxColumn2.Name = "FIRSTNAMEDataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "FIRST_NAME"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "FIRST_NAME"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
-        'LASTNAMEDataGridViewTextBoxColumn2
+        'DataGridViewTextBoxColumn2
         '
-        Me.LASTNAMEDataGridViewTextBoxColumn2.DataPropertyName = "LAST_NAME"
-        Me.LASTNAMEDataGridViewTextBoxColumn2.HeaderText = "LAST_NAME"
-        Me.LASTNAMEDataGridViewTextBoxColumn2.Name = "LASTNAMEDataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "LAST_NAME"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "LAST_NAME"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
-        'CUSTIDDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn3
         '
-        Me.CUSTIDDataGridViewTextBoxColumn1.DataPropertyName = "CUST_ID#"
-        Me.CUSTIDDataGridViewTextBoxColumn1.HeaderText = "CUST_ID#"
-        Me.CUSTIDDataGridViewTextBoxColumn1.Name = "CUSTIDDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "CUST_ID#"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "CUST_ID#"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'DAYSDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn4
         '
-        Me.DAYSDataGridViewTextBoxColumn1.DataPropertyName = "DAYS"
-        Me.DAYSDataGridViewTextBoxColumn1.HeaderText = "DAYS"
-        Me.DAYSDataGridViewTextBoxColumn1.Name = "DAYSDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "DAYS"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "DAYS"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'GUESTSDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn5
         '
-        Me.GUESTSDataGridViewTextBoxColumn1.DataPropertyName = "GUESTS"
-        Me.GUESTSDataGridViewTextBoxColumn1.HeaderText = "GUESTS"
-        Me.GUESTSDataGridViewTextBoxColumn1.Name = "GUESTSDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "GUESTS"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "GUESTS"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'CHECKINDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn6
         '
-        Me.CHECKINDataGridViewTextBoxColumn1.DataPropertyName = "CHECKIN"
-        Me.CHECKINDataGridViewTextBoxColumn1.HeaderText = "CHECKIN"
-        Me.CHECKINDataGridViewTextBoxColumn1.Name = "CHECKINDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "CHECKIN"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "CHECKIN"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'CHECKOUTDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn7
         '
-        Me.CHECKOUTDataGridViewTextBoxColumn1.DataPropertyName = "CHECKOUT"
-        Me.CHECKOUTDataGridViewTextBoxColumn1.HeaderText = "CHECKOUT"
-        Me.CHECKOUTDataGridViewTextBoxColumn1.Name = "CHECKOUTDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "CHECKOUT"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "CHECKOUT"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'TIMEINDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn8
         '
-        Me.TIMEINDataGridViewTextBoxColumn1.DataPropertyName = "TIME_IN"
-        Me.TIMEINDataGridViewTextBoxColumn1.HeaderText = "TIME_IN"
-        Me.TIMEINDataGridViewTextBoxColumn1.Name = "TIMEINDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "TIME_IN"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "TIME_IN"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         '
-        'TIMEOUTDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn9
         '
-        Me.TIMEOUTDataGridViewTextBoxColumn1.DataPropertyName = "TIME_OUT"
-        Me.TIMEOUTDataGridViewTextBoxColumn1.HeaderText = "TIME_OUT"
-        Me.TIMEOUTDataGridViewTextBoxColumn1.Name = "TIMEOUTDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "TIME_OUT"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "TIME_OUT"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         '
-        'DATEOFORDERDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn10
         '
-        Me.DATEOFORDERDataGridViewTextBoxColumn1.DataPropertyName = "DATE_OF_ORDER"
-        Me.DATEOFORDERDataGridViewTextBoxColumn1.HeaderText = "DATE_OF_ORDER"
-        Me.DATEOFORDERDataGridViewTextBoxColumn1.Name = "DATEOFORDERDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "DATE_OF_ORDER"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "DATE_OF_ORDER"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         '
-        'TOTALCOSTDataGridViewTextBoxColumn1
+        'DataGridViewTextBoxColumn11
         '
-        Me.TOTALCOSTDataGridViewTextBoxColumn1.DataPropertyName = "TOTAL_COST"
-        Me.TOTALCOSTDataGridViewTextBoxColumn1.HeaderText = "TOTAL_COST"
-        Me.TOTALCOSTDataGridViewTextBoxColumn1.Name = "TOTALCOSTDataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "TOTAL_COST"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "TOTAL_COST"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
         '
-        'PAIDDataGridViewCheckBoxColumn1
+        'DataGridViewCheckBoxColumn1
         '
-        Me.PAIDDataGridViewCheckBoxColumn1.DataPropertyName = "PAID"
-        Me.PAIDDataGridViewCheckBoxColumn1.HeaderText = "PAID"
-        Me.PAIDDataGridViewCheckBoxColumn1.Name = "PAIDDataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "PAID"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "PAID"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
         '
         'MaintenancePanel
         '
         Me.MaintenancePanel.Controls.Add(Me.DataGridMaintenanceTbl)
-        Me.MaintenancePanel.Location = New System.Drawing.Point(12, 51)
-        Me.MaintenancePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaintenancePanel.Location = New System.Drawing.Point(9, 41)
         Me.MaintenancePanel.Name = "MaintenancePanel"
-        Me.MaintenancePanel.Size = New System.Drawing.Size(771, 416)
+        Me.MaintenancePanel.Size = New System.Drawing.Size(578, 338)
         Me.MaintenancePanel.TabIndex = 0
         Me.MaintenancePanel.Visible = False
         '
@@ -750,9 +738,10 @@ Partial Class HomePage
         Me.DataGridMaintenanceTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ROOMDataGridViewTextBoxColumn1, Me.TYPEDataGridViewTextBoxColumn1, Me.COSTDataGridViewTextBoxColumn1, Me.OCCUPIEDDataGridViewCheckBoxColumn1, Me.DATEOCCUPIEDDataGridViewTextBoxColumn1, Me.TIMEOCCUPIEDDataGridViewTextBoxColumn1, Me.OCCUPANTIDDataGridViewTextBoxColumn1})
         Me.DataGridMaintenanceTbl.DataSource = Me.ROOMSBindingSource
         Me.DataGridMaintenanceTbl.Location = New System.Drawing.Point(0, -1)
+        Me.DataGridMaintenanceTbl.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridMaintenanceTbl.Name = "DataGridMaintenanceTbl"
         Me.DataGridMaintenanceTbl.RowTemplate.Height = 24
-        Me.DataGridMaintenanceTbl.Size = New System.Drawing.Size(771, 411)
+        Me.DataGridMaintenanceTbl.Size = New System.Drawing.Size(578, 334)
         Me.DataGridMaintenanceTbl.TabIndex = 0
         '
         'ROOMDataGridViewTextBoxColumn1
@@ -804,12 +793,21 @@ Partial Class HomePage
         '
         'EmployeePanel
         '
+        Me.EmployeePanel.Controls.Add(Me.bttnUpdateEmplyTbl)
         Me.EmployeePanel.Controls.Add(Me.DataGridEmplyTbl)
-        Me.EmployeePanel.Location = New System.Drawing.Point(12, 50)
-        Me.EmployeePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.EmployeePanel.Location = New System.Drawing.Point(690, 37)
         Me.EmployeePanel.Name = "EmployeePanel"
-        Me.EmployeePanel.Size = New System.Drawing.Size(771, 421)
+        Me.EmployeePanel.Size = New System.Drawing.Size(578, 406)
         Me.EmployeePanel.TabIndex = 0
+        '
+        'bttnUpdateEmplyTbl
+        '
+        Me.bttnUpdateEmplyTbl.Location = New System.Drawing.Point(23, 372)
+        Me.bttnUpdateEmplyTbl.Name = "bttnUpdateEmplyTbl"
+        Me.bttnUpdateEmplyTbl.Size = New System.Drawing.Size(75, 23)
+        Me.bttnUpdateEmplyTbl.TabIndex = 1
+        Me.bttnUpdateEmplyTbl.Text = "Update"
+        Me.bttnUpdateEmplyTbl.UseVisualStyleBackColor = True
         '
         'DataGridEmplyTbl
         '
@@ -818,57 +816,11 @@ Partial Class HomePage
         Me.DataGridEmplyTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FIRSTNAMEDataGridViewTextBoxColumn, Me.LASTNAMEDataGridViewTextBoxColumn, Me.SSNDataGridViewTextBoxColumn, Me.PHONEDataGridViewTextBoxColumn, Me.TITLEDataGridViewTextBoxColumn, Me.DEPTDataGridViewTextBoxColumn, Me.PAYHRLYDataGridViewTextBoxColumn})
         Me.DataGridEmplyTbl.DataSource = Me.EMPLOYEEBindingSource2
         Me.DataGridEmplyTbl.Location = New System.Drawing.Point(0, 1)
+        Me.DataGridEmplyTbl.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridEmplyTbl.Name = "DataGridEmplyTbl"
         Me.DataGridEmplyTbl.RowTemplate.Height = 24
-        Me.DataGridEmplyTbl.Size = New System.Drawing.Size(771, 410)
+        Me.DataGridEmplyTbl.Size = New System.Drawing.Size(578, 333)
         Me.DataGridEmplyTbl.TabIndex = 0
-        '
-        'EMPLOYEEBindingSource1
-        '
-        Me.EMPLOYEEBindingSource1.DataMember = "EMPLOYEE"
-        Me.EMPLOYEEBindingSource1.DataSource = Me.HOTELDBDataSetBindingSource
-        '
-        'EMPLOYEEBindingSource
-        '
-        Me.EMPLOYEEBindingSource.DataMember = "EMPLOYEE"
-        Me.EMPLOYEEBindingSource.DataSource = Me.HOTELDBDataSetBindingSource
-        '
-        'ROOMSBindingSource1
-        '
-        Me.ROOMSBindingSource1.DataMember = "ROOMS"
-        Me.ROOMSBindingSource1.DataSource = Me.HOTELDBDataSetBindingSource
-        '
-        'ROOMSBindingSource2
-        '
-        Me.ROOMSBindingSource2.DataMember = "ROOMS"
-        Me.ROOMSBindingSource2.DataSource = Me.HOTELDBDataSetBindingSource
-        '
-        'ROOMSTableAdapter
-        '
-        Me.ROOMSTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CUSTOMERTableAdapter = Nothing
-        Me.TableAdapterManager.EMPLOYEETableAdapter = Nothing
-        Me.TableAdapterManager.EMPLY_PAY_TABLETableAdapter = Nothing
-        Me.TableAdapterManager.MANAGEMENTTableAdapter = Nothing
-        Me.TableAdapterManager.ROOMSTableAdapter = Me.ROOMSTableAdapter
-        Me.TableAdapterManager.UpdateOrder = HotelSystem.HOTEL_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'EMPLOYEETableAdapter
-        '
-        Me.EMPLOYEETableAdapter.ClearBeforeFill = True
-        '
-        'CUSTOMERTableAdapter
-        '
-        Me.CUSTOMERTableAdapter.ClearBeforeFill = True
-        '
-        'EMPLOYEEBindingSource2
-        '
-        Me.EMPLOYEEBindingSource2.DataMember = "EMPLOYEE"
-        Me.EMPLOYEEBindingSource2.DataSource = Me.HOTELDBDataSetBindingSource
         '
         'FIRSTNAMEDataGridViewTextBoxColumn
         '
@@ -912,11 +864,64 @@ Partial Class HomePage
         Me.PAYHRLYDataGridViewTextBoxColumn.HeaderText = "PAY_HRLY"
         Me.PAYHRLYDataGridViewTextBoxColumn.Name = "PAYHRLYDataGridViewTextBoxColumn"
         '
+        'EMPLOYEEBindingSource2
+        '
+        Me.EMPLOYEEBindingSource2.DataMember = "EMPLOYEE"
+        Me.EMPLOYEEBindingSource2.DataSource = Me.HOTELDBDataSetBindingSource
+        '
+        'EMPLOYEEBindingSource1
+        '
+        Me.EMPLOYEEBindingSource1.DataMember = "EMPLOYEE"
+        Me.EMPLOYEEBindingSource1.DataSource = Me.HOTELDBDataSetBindingSource
+        '
+        'EMPLOYEEBindingSource
+        '
+        Me.EMPLOYEEBindingSource.DataMember = "EMPLOYEE"
+        Me.EMPLOYEEBindingSource.DataSource = Me.HOTELDBDataSetBindingSource
+        '
+        'ROOMSBindingSource1
+        '
+        Me.ROOMSBindingSource1.DataMember = "ROOMS"
+        Me.ROOMSBindingSource1.DataSource = Me.HOTELDBDataSetBindingSource
+        '
+        'ROOMSBindingSource2
+        '
+        Me.ROOMSBindingSource2.DataMember = "ROOMS"
+        Me.ROOMSBindingSource2.DataSource = Me.HOTELDBDataSetBindingSource
+        '
+        'ROOMSTableAdapter
+        '
+        Me.ROOMSTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CUSTOMERTableAdapter = Nothing
+        Me.TableAdapterManager.EMPLOYEETableAdapter = Nothing
+        Me.TableAdapterManager.EMPLY_PAY_TABLETableAdapter = Nothing
+        Me.TableAdapterManager.MANAGEMENTTableAdapter = Nothing
+        Me.TableAdapterManager.ROOMSTableAdapter = Me.ROOMSTableAdapter
+        Me.TableAdapterManager.UpdateOrder = HotelSystem.HOTEL_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'EMPLOYEETableAdapter
+        '
+        Me.EMPLOYEETableAdapter.ClearBeforeFill = True
+        '
+        'CUSTOMERTableAdapter
+        '
+        Me.CUSTOMERTableAdapter.ClearBeforeFill = True
+        '
+        'CUSTOMERBindingSource1
+        '
+        Me.CUSTOMERBindingSource1.DataMember = "CUSTOMER"
+        Me.CUSTOMERBindingSource1.DataSource = Me.HOTELDBDataSetBindingSource
+        '
         'HomePage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1262, 473)
+        Me.ClientSize = New System.Drawing.Size(1484, 989)
+        Me.Controls.Add(Me.ChkInPanel)
         Me.Controls.Add(Me.EmployeePanel)
         Me.Controls.Add(Me.HomePanel)
         Me.Controls.Add(Me.MaintenancePanel)
@@ -929,7 +934,6 @@ Partial Class HomePage
         Me.Controls.Add(Me.CheckInButton)
         Me.Controls.Add(Me.ResButton)
         Me.Controls.Add(Me.HomeButton)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "HomePage"
         Me.Text = "Home"
         Me.HomePanel.ResumeLayout(False)
@@ -941,19 +945,21 @@ Partial Class HomePage
         CType(Me.HOTELDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HOTEL_DBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ChkInPanel.ResumeLayout(False)
-        CType(Me.DataGridChkInTbl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CUSTOMERDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CUSTOMERBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ChkOutPanel.ResumeLayout(False)
-        CType(Me.DataGridChkOutTbl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CUSTOMERDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaintenancePanel.ResumeLayout(False)
         CType(Me.DataGridMaintenanceTbl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ROOMSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EmployeePanel.ResumeLayout(False)
         CType(Me.DataGridEmplyTbl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EMPLOYEEBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EMPLOYEEBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EMPLOYEEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ROOMSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ROOMSBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EMPLOYEEBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CUSTOMERBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1022,32 +1028,6 @@ Partial Class HomePage
     Friend WithEvents DATEOFORDERDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents TOTALCOSTDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents PAIDDataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridChkInTbl As DataGridView
-    Friend WithEvents FIRSTNAMEDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents LASTNAMEDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents CUSTIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DAYSDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents GUESTSDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CHECKINDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CHECKOUTDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TIMEINDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TIMEOUTDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DATEOFORDERDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TOTALCOSTDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PAIDDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridChkOutTbl As DataGridView
-    Friend WithEvents FIRSTNAMEDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents LASTNAMEDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents CUSTIDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DAYSDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents GUESTSDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents CHECKINDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents CHECKOUTDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents TIMEINDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents TIMEOUTDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DATEOFORDERDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents TOTALCOSTDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents PAIDDataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
     Friend WithEvents EMPLOYEEBindingSource1 As BindingSource
     Friend WithEvents EMPLOYEEBindingSource2 As BindingSource
     Friend WithEvents FIRSTNAMEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -1057,4 +1037,34 @@ Partial Class HomePage
     Friend WithEvents TITLEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DEPTDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PAYHRLYDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents bttnUpdateCheckInTbl As Button
+    Friend WithEvents bttnUpdateEmplyTbl As Button
+    Friend WithEvents CUSTOMERBindingSource1 As BindingSource
+    Friend WithEvents CUSTOMERDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents CUSTOMERBindingSource2 As BindingSource
+    Friend WithEvents CUSTOMERDataGridView1 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
 End Class
