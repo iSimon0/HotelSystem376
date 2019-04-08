@@ -32,25 +32,28 @@ Partial Class LoginPage
         '
         'UsernameBox
         '
-        Me.UsernameBox.Location = New System.Drawing.Point(261, 96)
+        Me.UsernameBox.Location = New System.Drawing.Point(348, 118)
+        Me.UsernameBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.UsernameBox.Name = "UsernameBox"
-        Me.UsernameBox.Size = New System.Drawing.Size(212, 20)
+        Me.UsernameBox.Size = New System.Drawing.Size(281, 22)
         Me.UsernameBox.TabIndex = 0
         '
         'PasswordBox
         '
-        Me.PasswordBox.Location = New System.Drawing.Point(261, 123)
+        Me.PasswordBox.Location = New System.Drawing.Point(348, 151)
+        Me.PasswordBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PasswordBox.Name = "PasswordBox"
         Me.PasswordBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PasswordBox.Size = New System.Drawing.Size(212, 20)
+        Me.PasswordBox.Size = New System.Drawing.Size(281, 22)
         Me.PasswordBox.TabIndex = 1
         Me.PasswordBox.UseSystemPasswordChar = True
         '
         'LoginButton
         '
-        Me.LoginButton.Location = New System.Drawing.Point(398, 149)
+        Me.LoginButton.Location = New System.Drawing.Point(531, 183)
+        Me.LoginButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LoginButton.Name = "LoginButton"
-        Me.LoginButton.Size = New System.Drawing.Size(75, 23)
+        Me.LoginButton.Size = New System.Drawing.Size(100, 28)
         Me.LoginButton.TabIndex = 2
         Me.LoginButton.Text = "Enter"
         Me.LoginButton.UseVisualStyleBackColor = True
@@ -59,42 +62,47 @@ Partial Class LoginPage
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(202, 65)
+        Me.Label1.Location = New System.Drawing.Point(269, 80)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 18)
+        Me.Label1.Size = New System.Drawing.Size(62, 24)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Log in"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(202, 99)
+        Me.Label2.Location = New System.Drawing.Point(269, 122)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.Size = New System.Drawing.Size(73, 17)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Username"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(202, 126)
+        Me.Label3.Location = New System.Drawing.Point(269, 155)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.Size = New System.Drawing.Size(69, 17)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Password"
         '
-        'Form1
+        'LoginPage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AcceptButton = Me.LoginButton
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.PasswordBox)
         Me.Controls.Add(Me.UsernameBox)
-        Me.Name = "Form1"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "LoginPage"
         Me.Text = "Hotel Master"
         Me.ResumeLayout(False)
         Me.PerformLayout()

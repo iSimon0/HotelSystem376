@@ -1,6 +1,12 @@
 ﻿Imports System.Data.OleDb
+Imports System.Data
+Imports System.Configuration
 
 Public Class HomePage
+
+    Const Con As String = "Provider=Microsoft.ACE.OLEDB.12.0;" &
+            "Data Source=C:\Users\alsay\Documents\GitHub\HotelSystem376\HOTEL_DB.accdb"
+
     Private Sub RefreshHomeInfo_Click(sender As Object, e As EventArgs) Handles RefreshHomeInfo.Click
 
         DateLabel.Text = System.DateTime.Now.ToString("dd MMMM yyyy")
@@ -18,6 +24,28 @@ Public Class HomePage
     End Sub
 
     Private Sub EmployeeButton_Click(sender As Object, e As EventArgs) Handles EmployeeButton.Click
+
+        Const SQLExpression As String = "SELECT * FROM EMPLOYEE;"
+
+
+        Dim cn As New OleDbConnection(Con)
+        cn.Open()
+        Dim da As New OleDbDataAdapter(SQLExpression, cn)
+
+        Dim ds As New DataSet
+        da.Fill(ds, "EMPLOYEE")
+        cn.Close()
+
+        With Me.DataGridEmplyTbl
+            .DataSource = ds
+            'Here we control which table the DataGridView should display.
+            .DataMember = "EMPLOYEE"
+        End With
+
+        ds = Nothing
+        da.Dispose()
+        cn = Nothing
+
         'Turn off all other panels
         HomePanel.Visible = False
         MaintenancePanel.Visible = False
@@ -25,21 +53,22 @@ Public Class HomePage
         ChkInPanel.Visible = False
         ReservationPanel.Visible = False
 
-        'Make the Home panel visible to user
+        'Make the EMPLY panel visible to user
         EmployeePanel.Visible = True
-
-
-
 
     End Sub
 
     Private Sub HomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.EMPLOYEE' table. You can move, or remove it, as needed.
+        Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
         'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
         Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
         'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
         Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
         'TODO: This line of code loads data into the 'HOTEL_DBDataSet.EMPLOYEE' table. You can move, or remove it, as needed.
-        '  Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
+        Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
+
+
         'Turn off all other panels
         EmployeePanel.Visible = False
         MaintenancePanel.Visible = False
@@ -49,6 +78,7 @@ Public Class HomePage
 
         'Make the employee panel visible to user
         HomePanel.Visible = True
+
     End Sub
 
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
@@ -101,4 +131,7 @@ Public Class HomePage
         MaintenancePanel.Visible = True
 
     End Sub
+
+
+
 End Class
