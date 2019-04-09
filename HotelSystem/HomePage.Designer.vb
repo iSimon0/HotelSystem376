@@ -725,9 +725,9 @@ Partial Class HomePage
         'MaintenancePanel
         '
         Me.MaintenancePanel.Controls.Add(Me.DataGridMaintenanceTbl)
-        Me.MaintenancePanel.Location = New System.Drawing.Point(9, 41)
+        Me.MaintenancePanel.Location = New System.Drawing.Point(106, 399)
         Me.MaintenancePanel.Name = "MaintenancePanel"
-        Me.MaintenancePanel.Size = New System.Drawing.Size(578, 338)
+        Me.MaintenancePanel.Size = New System.Drawing.Size(578, 157)
         Me.MaintenancePanel.TabIndex = 0
         Me.MaintenancePanel.Visible = False
         '
@@ -741,7 +741,7 @@ Partial Class HomePage
         Me.DataGridMaintenanceTbl.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridMaintenanceTbl.Name = "DataGridMaintenanceTbl"
         Me.DataGridMaintenanceTbl.RowTemplate.Height = 24
-        Me.DataGridMaintenanceTbl.Size = New System.Drawing.Size(578, 334)
+        Me.DataGridMaintenanceTbl.Size = New System.Drawing.Size(578, 170)
         Me.DataGridMaintenanceTbl.TabIndex = 0
         '
         'ROOMDataGridViewTextBoxColumn1

@@ -7,6 +7,10 @@ Public Class HomePage
     'Con String used to hold source for connection to DB
     Const Con As String = "Provider=Microsoft.ACE.OLEDB.12.0;" &
             "Data Source=C:\Users\alsay\Documents\GitHub\HotelSystem376\HOTEL_DB.accdb"
+    Dim ds As New DataSet
+    Dim dt As New DataTable
+    Dim da As New OleDbDataAdapter
+
 
     Private Sub RefreshHomeInfo_Click(sender As Object, e As EventArgs) Handles RefreshHomeInfo.Click
 
@@ -55,9 +59,9 @@ Public Class HomePage
         '*** CONNECTION
         Dim cn As New OleDbConnection(Con)
         cn.Open()
-        Dim da As New OleDbDataAdapter(SQLExpression, cn)
+        da = New OleDbDataAdapter(SQLExpression, cn)
 
-        Dim ds As New DataSet
+        'Dim ds As New DataSet
         da.Fill(ds, "EMPLOYEE")
         cn.Close()
 
@@ -72,6 +76,8 @@ Public Class HomePage
         cn = Nothing
         '*** CONNECTION
 
+
+
         'Turn off all other panels
         HomePanel.Visible = False
         MaintenancePanel.Visible = False
@@ -84,6 +90,15 @@ Public Class HomePage
 
     End Sub
 
+    Private Sub bttnUpdateEmplyTbl_Click(sender As Object, e As EventArgs) Handles bttnUpdateEmplyTbl.Click
+        Dim cn As New OleDbConnection(Con)
+        cn.Open()
+        ds.Tables.Add(dt)
+        da = New OleDbDataAdapter("Select * from EMPLOYEE", cn)
+        da.Update(dt)
+        cn.Close()
+
+    End Sub
 
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
         'Turn off all other panels
@@ -137,6 +152,32 @@ Public Class HomePage
     End Sub
 
     Private Sub MaintenanceButton_Click(sender As Object, e As EventArgs) Handles MaintenanceButton.Click
+
+        'Which table data will be pulled from
+        Const SQLExpression As String = "SELECT * FROM ROOMS;"
+
+        '*** CONNECTION
+        Dim cn As New OleDbConnection(Con)
+        cn.Open()
+        Dim da As New OleDbDataAdapter(SQLExpression, cn)
+
+        Dim ds As New DataSet
+        da.Fill(ds, "ROOMS")
+        cn.Close()
+
+        With Me.DataGridMaintenanceTbl
+
+            .DataSource = ds
+            'Here we control which table the DataGridView should display.
+            .DataMember = "ROOMS"
+        End With
+
+        ds = Nothing
+        da.Dispose()
+        cn = Nothing
+        '*** CONNECTION
+
+
         'Turn off all other panels
         HomePanel.Visible = False
         EmployeePanel.Visible = False
@@ -184,4 +225,6 @@ Public Class HomePage
         'Make the Check In panel visible to user
         ChkInPanel.Visible = True
     End Sub
+
+
 End Class
