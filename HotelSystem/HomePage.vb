@@ -6,7 +6,7 @@ Public Class HomePage
     'ADAM PATH: "Data Source=C:\Users\alsay\Documents\GitHub\HotelSystem376\HOTEL_DB.accdb"
     'Con String used to hold source for connection to DB
     Const Con As String = "Provider=Microsoft.ACE.OLEDB.12.0;" &
-            "Data Source=HOTEL_DB.accdb"
+            "Data Source=C:\Users\alsay\Documents\GitHub\HotelSystem376\HOTEL_DB.accdb"
     Dim ds As New DataSet
     Dim dt As New DataTable
     Dim da As New OleDbDataAdapter
@@ -33,10 +33,7 @@ Public Class HomePage
         Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
         'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
         Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
-        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
-        Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
-        'TODO: This line of code loads data into the 'HOTEL_DBDataSet.EMPLOYEE' table. You can move, or remove it, as needed.
-        Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
+
 
 
 
@@ -53,6 +50,8 @@ Public Class HomePage
     End Sub
 
     Private Sub EmployeeButton_Click(sender As Object, e As EventArgs) Handles EmployeeButton.Click
+
+
         'Which table data will be pulled from
         Const SQLExpression As String = "SELECT * FROM EMPLOYEE;"
 
@@ -91,12 +90,8 @@ Public Class HomePage
     End Sub
 
     Private Sub bttnUpdateEmplyTbl_Click(sender As Object, e As EventArgs) Handles bttnUpdateEmplyTbl.Click
-        Dim cn As New OleDbConnection(Con)
-        cn.Open()
-        ds.Tables.Add(dt)
-        da = New OleDbDataAdapter("Select * from EMPLOYEE", cn)
-        da.Update(dt)
-        cn.Close()
+        EMPLOYEEBindingSource.AddNew()
+
 
     End Sub
 
@@ -226,5 +221,8 @@ Public Class HomePage
         ChkInPanel.Visible = True
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        EMPLOYEEBindingSource.EndEdit()
+        EMPLOYEETableAdapter.Update(HOTEL_DBDataSet.EMPLOYEE)
+    End Sub
 End Class
