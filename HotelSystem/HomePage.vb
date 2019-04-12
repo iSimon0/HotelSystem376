@@ -3,7 +3,7 @@ Imports System.Data
 Imports System.Configuration
 
 Public Class HomePage
-
+    'ADAM PATH: "Data Source=C:\Users\alsay\Documents\GitHub\HotelSystem376\HOTEL_DB.accdb"
     'Con String used to hold source for connection to DB
     Const Con As String = "Provider=Microsoft.ACE.OLEDB.12.0;" &
             "Data Source=C:\Users\alsay\Documents\GitHub\HotelSystem376\HOTEL_DB.accdb"
