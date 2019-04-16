@@ -7,6 +7,7 @@ Public Class HomePage
     'DBControl 
     Private Access As New DBControl
 
+
     Private Sub RefreshHomeInfo_Click(sender As Object, e As EventArgs) Handles RefreshHomeInfo.Click
 
         DateLabel.Text = System.DateTime.Now.ToString("dd MMMM yyyy")
@@ -29,9 +30,6 @@ Public Class HomePage
         'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
         Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
 
-
-
-
         'Turn off all other panels
         EmployeePanel.Visible = False
         MaintenancePanel.Visible = False
@@ -53,6 +51,7 @@ Public Class HomePage
         End If
 
 
+
         'Turn off all other panels
         HomePanel.Visible = False
         MaintenancePanel.Visible = False
@@ -66,8 +65,9 @@ Public Class HomePage
     End Sub
 
     Private Sub bttnUpdateEmplyTbl_Click(sender As Object, e As EventArgs) Handles bttnUpdateEmplyTbl.Click
-        EMPLOYEEBindingSource.AddNew()
 
+        Me.EMPLOYEEBindingSource3.EndEdit()
+        Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
 
     End Sub
 
@@ -128,7 +128,6 @@ Public Class HomePage
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        EMPLOYEEBindingSource.EndEdit()
-        EMPLOYEETableAdapter.Update(HOTEL_DBDataSet.EMPLOYEE)
+        EMPLOYEEBindingSource3.AddNew()
     End Sub
 End Class

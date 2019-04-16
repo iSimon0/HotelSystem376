@@ -2,15 +2,15 @@
 
 Public Class DBControl
     ' CREATE DB CONNECTION
-    Private DBCon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=HOTEL_DB.accdb;")
+    Public DBCon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source=HOTEL_DB.accdb;")
 
     'MAKE DB COMMAND
-    Private DBCmd As OleDbCommand
+    Public DBCmd As OleDbCommand
 
     'DB DATA STORING AND HANDLING
     Public DBDA As OleDbDataAdapter
     Public DBDT As DataTable
-
+    Public DS As DataSet
     'FOR MANAFGING QUERY DATA
     Public Params As New List(Of OleDbParameter)
 

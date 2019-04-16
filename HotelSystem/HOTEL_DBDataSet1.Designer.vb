@@ -4273,33 +4273,35 @@ Namespace HOTEL_DBDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PAY_HRLY", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PAY_HRLY", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `EMPLOYEE` SET `FIRST_NAME` = ?, `LAST_NAME` = ?, `SSN` = ?, `PHONE#` = ?,"& _ 
-                " `TITLE` = ?, `DEPT#` = ?, `PAY_HRLY` = ? WHERE (((? = 1 AND `FIRST_NAME` IS NUL"& _ 
-                "L) OR (`FIRST_NAME` = ?)) AND ((? = 1 AND `LAST_NAME` IS NULL) OR (`LAST_NAME` ="& _ 
-                " ?)) AND (`SSN` = ?) AND ((? = 1 AND `PHONE#` IS NULL) OR (`PHONE#` = ?)) AND (("& _ 
-                "? = 1 AND `TITLE` IS NULL) OR (`TITLE` = ?)) AND ((? = 1 AND `DEPT#` IS NULL) OR"& _ 
-                " (`DEPT#` = ?)) AND ((? = 1 AND `PAY_HRLY` IS NULL) OR (`PAY_HRLY` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE       EMPLOYEE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                FIRST_NAME = ?, LAST_NAME = ?, SSN = ?,"& _ 
+                " [PHONE#] = ?, TITLE = ?, [DEPT#] = ?, PAY_HRLY = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (? = 1 AND FIR"& _ 
+                "ST_NAME IS NULL OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         FIRST_NAME = ?) AND (? = 1 AND LAST"& _ 
+                "_NAME IS NULL OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LAST_NAME = ?) AND (SSN = ?) AND (? ="& _ 
+                " 1 AND [PHONE#] IS NULL OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         [PHONE#] = ?) AND (? = 1 AN"& _ 
+                "D TITLE IS NULL OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         TITLE = ?) AND (? = 1 AND [DEPT#] I"& _ 
+                "S NULL OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         [DEPT#] = ?) AND (? = 1 AND PAY_HRLY IS NULL"& _ 
+                " OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PAY_HRLY = ?)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FIRST_NAME", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FIRST_NAME", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LAST_NAME", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LAST_NAME", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SSN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SSN", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PHONE#", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PHONE#", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TITLE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TITLE", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEPT#", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEPT#", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PAY_HRLY", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PAY_HRLY", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FIRST_NAME", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FIRST_NAME", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FIRST_NAME", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FIRST_NAME", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_LAST_NAME", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LAST_NAME", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LAST_NAME", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LAST_NAME", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SSN", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SSN", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PHONE#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PHONE#", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PHONE#", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PHONE#", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TITLE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TITLE", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TITLE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TITLE", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DEPT#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEPT#", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEPT#", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEPT#", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PAY_HRLY", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PAY_HRLY", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PAY_HRLY", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PAY_HRLY", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FIRST_NAME", Global.System.Data.OleDb.OleDbType.WChar, 25, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FIRST_NAME", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LAST_NAME", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LAST_NAME", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SSN", Global.System.Data.OleDb.OleDbType.WChar, 11, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SSN", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PHONE_", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PHONE#", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TITLE", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TITLE", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DEPT_", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEPT#", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PAY_HRLY", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(19,Byte), CType(0,Byte), "PAY_HRLY", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FIRST_NAME", Global.System.Data.OleDb.OleDbType.WChar, 25, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FIRST_NAME", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FIRST_NAME1", Global.System.Data.OleDb.OleDbType.WChar, 25, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FIRST_NAME", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LAST_NAME", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LAST_NAME", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LAST_NAME1", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LAST_NAME", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SSN", Global.System.Data.OleDb.OleDbType.WChar, 11, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SSN", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PHONE_", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PHONE#", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PHONE_1", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PHONE#", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TITLE", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TITLE", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TITLE1", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TITLE", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEPT_", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEPT#", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DEPT_1", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DEPT#", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PAY_HRLY", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(19,Byte), CType(0,Byte), "PAY_HRLY", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_PAY_HRLY1", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(19,Byte), CType(0,Byte), "PAY_HRLY", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4489,7 +4491,27 @@ Namespace HOTEL_DBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal FIRST_NAME As String, ByVal LAST_NAME As String, ByVal SSN As String, ByVal _PHONE_ As String, ByVal TITLE As String, ByVal _DEPT_ As String, ByVal PAY_HRLY As Short, ByVal Original_FIRST_NAME As String, ByVal Original_LAST_NAME As String, ByVal Original_SSN As String, ByVal _Original_PHONE_ As String, ByVal Original_TITLE As String, ByVal _Original_DEPT_ As String, ByVal Original_PAY_HRLY As Short) As Integer
+        Public Overloads Overridable Function Update( _
+                    ByVal FIRST_NAME As String,  _
+                    ByVal LAST_NAME As String,  _
+                    ByVal SSN As String,  _
+                    ByVal PHONE_ As String,  _
+                    ByVal TITLE As String,  _
+                    ByVal DEPT_ As String,  _
+                    ByVal PAY_HRLY As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_FIRST_NAME As String,  _
+                    ByVal Original_FIRST_NAME1 As String,  _
+                    ByVal Original_LAST_NAME As String,  _
+                    ByVal Original_LAST_NAME1 As String,  _
+                    ByVal Original_SSN As String,  _
+                    ByVal Original_PHONE_ As String,  _
+                    ByVal Original_PHONE_1 As String,  _
+                    ByVal Original_TITLE As String,  _
+                    ByVal Original_TITLE1 As String,  _
+                    ByVal Original_DEPT_ As String,  _
+                    ByVal Original_DEPT_1 As String,  _
+                    ByVal Original_PAY_HRLY As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_PAY_HRLY1 As Global.System.Nullable(Of Decimal)) As Integer
             If (FIRST_NAME Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -4505,64 +4527,91 @@ Namespace HOTEL_DBDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(2).Value = CType(SSN,String)
             End If
-            If (_PHONE_ Is Nothing) Then
+            If (PHONE_ Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(_PHONE_,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(PHONE_,String)
             End If
             If (TITLE Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = CType(TITLE,String)
             End If
-            If (_DEPT_ Is Nothing) Then
+            If (DEPT_ Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(_DEPT_,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(DEPT_,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(PAY_HRLY,Short)
+            If (PAY_HRLY.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(PAY_HRLY.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
             If (Original_FIRST_NAME Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_FIRST_NAME,String)
+            End If
+            If (Original_FIRST_NAME1 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_FIRST_NAME,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_FIRST_NAME1,String)
             End If
             If (Original_LAST_NAME Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_LAST_NAME,String)
+            End If
+            If (Original_LAST_NAME1 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_LAST_NAME,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_LAST_NAME1,String)
             End If
             If (Original_SSN Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_SSN")
             Else
                 Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_SSN,String)
             End If
-            If (_Original_PHONE_ Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+            If (Original_PHONE_ Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_PHONE_,String)
+            End If
+            If (Original_PHONE_1 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(_Original_PHONE_,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_PHONE_1,String)
             End If
             If (Original_TITLE Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_TITLE,String)
+            End If
+            If (Original_TITLE1 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_TITLE,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_TITLE1,String)
             End If
-            If (_Original_DEPT_ Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+            If (Original_DEPT_ Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_DEPT_,String)
+            End If
+            If (Original_DEPT_1 Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(_Original_DEPT_,String)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_DEPT_1,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_PAY_HRLY,Short)
+            If (Original_PAY_HRLY.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_PAY_HRLY.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PAY_HRLY1.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_PAY_HRLY1.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4582,8 +4631,27 @@ Namespace HOTEL_DBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal FIRST_NAME As String, ByVal LAST_NAME As String, ByVal _PHONE_ As String, ByVal TITLE As String, ByVal _DEPT_ As String, ByVal PAY_HRLY As Short, ByVal Original_FIRST_NAME As String, ByVal Original_LAST_NAME As String, ByVal Original_SSN As String, ByVal _Original_PHONE_ As String, ByVal Original_TITLE As String, ByVal _Original_DEPT_ As String, ByVal Original_PAY_HRLY As Short) As Integer
-            Return Me.Update(FIRST_NAME, LAST_NAME, Original_SSN, _PHONE_, TITLE, _DEPT_, PAY_HRLY, Original_FIRST_NAME, Original_LAST_NAME, Original_SSN, _Original_PHONE_, Original_TITLE, _Original_DEPT_, Original_PAY_HRLY)
+        Public Overloads Overridable Function Update( _
+                    ByVal FIRST_NAME As String,  _
+                    ByVal LAST_NAME As String,  _
+                    ByVal PHONE_ As String,  _
+                    ByVal TITLE As String,  _
+                    ByVal DEPT_ As String,  _
+                    ByVal PAY_HRLY As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_FIRST_NAME As String,  _
+                    ByVal Original_FIRST_NAME1 As String,  _
+                    ByVal Original_LAST_NAME As String,  _
+                    ByVal Original_LAST_NAME1 As String,  _
+                    ByVal Original_SSN As String,  _
+                    ByVal Original_PHONE_ As String,  _
+                    ByVal Original_PHONE_1 As String,  _
+                    ByVal Original_TITLE As String,  _
+                    ByVal Original_TITLE1 As String,  _
+                    ByVal Original_DEPT_ As String,  _
+                    ByVal Original_DEPT_1 As String,  _
+                    ByVal Original_PAY_HRLY As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_PAY_HRLY1 As Global.System.Nullable(Of Decimal)) As Integer
+            Return Me.Update(FIRST_NAME, LAST_NAME, Original_SSN, PHONE_, TITLE, DEPT_, PAY_HRLY, Original_FIRST_NAME, Original_FIRST_NAME1, Original_LAST_NAME, Original_LAST_NAME1, Original_SSN, Original_PHONE_, Original_PHONE_1, Original_TITLE, Original_TITLE1, Original_DEPT_, Original_DEPT_1, Original_PAY_HRLY, Original_PAY_HRLY1)
         End Function
     End Class
     
