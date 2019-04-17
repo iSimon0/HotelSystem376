@@ -123,7 +123,40 @@
               <Mapping SourceColumn="TOTAL_COST" DataSetColumn="TOTAL_COST" />
               <Mapping SourceColumn="PAID" DataSetColumn="PAID" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="HOTEL_DBConnectionString (MySettings)" DbObjectName="CUSTOMER" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="CheckOutOrder" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="CheckOutOrder" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="CheckOutOrder">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FIRST_NAME, LAST_NAME, [CUST_ID#], DAYS, GUESTS, CHECKIN, CHECKOUT, TIME_IN, TIME_OUT, DATE_OF_ORDER, TOTAL_COST, PAID FROM CUSTOMER ORDER BY CHECKOUT DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HOTEL_DBConnectionString (MySettings)" DbObjectName="CUSTOMER" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FIRST_NAME, LAST_NAME, [CUST_ID#], DAYS, GUESTS, CHECKIN, CHECKOUT, TIME_IN, TIME_OUT, DATE_OF_ORDER, TOTAL_COST, PAID FROM CUSTOMER ORDER BY CHECKOUT ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HOTEL_DBConnectionString (MySettings)" DbObjectName="CUSTOMER" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FIRST_NAME, LAST_NAME, [CUST_ID#], DAYS, GUESTS, CHECKIN, CHECKOUT, TIME_IN, TIME_OUT, DATE_OF_ORDER, TOTAL_COST, PAID FROM CUSTOMER ORDER BY CHECKIN ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="HOTEL_DBConnectionString (MySettings)" DbObjectName="CUSTOMER" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FIRST_NAME, LAST_NAME, [CUST_ID#], DAYS, GUESTS, CHECKIN, CHECKOUT, TIME_IN, TIME_OUT, DATE_OF_ORDER, TOTAL_COST, PAID FROM CUSTOMER ORDER BY CHECKIN ASC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EMPLOYEETableAdapter" GeneratorDataComponentClassName="EMPLOYEETableAdapter" Name="EMPLOYEE" UserDataComponentName="EMPLOYEETableAdapter">
             <MainSource>
@@ -473,7 +506,7 @@ WHERE        (? = 1 AND FIRST_NAME IS NULL OR
   <xs:element name="HOTEL_DBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="HOTEL_DBDataSet" msprop:Generator_UserDSName="HOTEL_DBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CUSTOMER" msprop:Generator_TableClassName="CUSTOMERDataTable" msprop:Generator_TableVarName="tableCUSTOMER" msprop:Generator_RowChangedName="CUSTOMERRowChanged" msprop:Generator_TablePropName="CUSTOMER" msprop:Generator_RowDeletingName="CUSTOMERRowDeleting" msprop:Generator_RowChangingName="CUSTOMERRowChanging" msprop:Generator_RowEvHandlerName="CUSTOMERRowChangeEventHandler" msprop:Generator_RowDeletedName="CUSTOMERRowDeleted" msprop:Generator_RowClassName="CUSTOMERRow" msprop:Generator_UserTableName="CUSTOMER" msprop:Generator_RowEvArgName="CUSTOMERRowChangeEvent">
+        <xs:element name="CUSTOMER" msprop:Generator_TableClassName="CUSTOMERDataTable" msprop:Generator_TableVarName="tableCUSTOMER" msprop:Generator_TablePropName="CUSTOMER" msprop:Generator_RowDeletingName="CUSTOMERRowDeleting" msprop:Generator_RowChangingName="CUSTOMERRowChanging" msprop:Generator_RowEvHandlerName="CUSTOMERRowChangeEventHandler" msprop:Generator_RowDeletedName="CUSTOMERRowDeleted" msprop:Generator_UserTableName="CUSTOMER" msprop:Generator_RowChangedName="CUSTOMERRowChanged" msprop:Generator_RowEvArgName="CUSTOMERRowChangeEvent" msprop:Generator_RowClassName="CUSTOMERRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnFIRST_NAME" msprop:Generator_ColumnPropNameInRow="FIRST_NAME" msprop:Generator_ColumnPropNameInTable="FIRST_NAMEColumn" msprop:Generator_UserColumnName="FIRST_NAME" minOccurs="0">
@@ -503,7 +536,7 @@ WHERE        (? = 1 AND FIRST_NAME IS NULL OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EMPLOYEE" msprop:Generator_TableClassName="EMPLOYEEDataTable" msprop:Generator_TableVarName="tableEMPLOYEE" msprop:Generator_RowChangedName="EMPLOYEERowChanged" msprop:Generator_TablePropName="EMPLOYEE" msprop:Generator_RowDeletingName="EMPLOYEERowDeleting" msprop:Generator_RowChangingName="EMPLOYEERowChanging" msprop:Generator_RowEvHandlerName="EMPLOYEERowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLOYEERowDeleted" msprop:Generator_RowClassName="EMPLOYEERow" msprop:Generator_UserTableName="EMPLOYEE" msprop:Generator_RowEvArgName="EMPLOYEERowChangeEvent">
+        <xs:element name="EMPLOYEE" msprop:Generator_TableClassName="EMPLOYEEDataTable" msprop:Generator_TableVarName="tableEMPLOYEE" msprop:Generator_TablePropName="EMPLOYEE" msprop:Generator_RowDeletingName="EMPLOYEERowDeleting" msprop:Generator_RowChangingName="EMPLOYEERowChanging" msprop:Generator_RowEvHandlerName="EMPLOYEERowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLOYEERowDeleted" msprop:Generator_UserTableName="EMPLOYEE" msprop:Generator_RowChangedName="EMPLOYEERowChanged" msprop:Generator_RowEvArgName="EMPLOYEERowChangeEvent" msprop:Generator_RowClassName="EMPLOYEERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnFIRST_NAME" msprop:Generator_ColumnPropNameInRow="FIRST_NAME" msprop:Generator_ColumnPropNameInTable="FIRST_NAMEColumn" msprop:Generator_UserColumnName="FIRST_NAME" minOccurs="0">
@@ -552,7 +585,7 @@ WHERE        (? = 1 AND FIRST_NAME IS NULL OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EMPLY_PAY_TABLE" msprop:Generator_TableClassName="EMPLY_PAY_TABLEDataTable" msprop:Generator_TableVarName="tableEMPLY_PAY_TABLE" msprop:Generator_RowChangedName="EMPLY_PAY_TABLERowChanged" msprop:Generator_TablePropName="EMPLY_PAY_TABLE" msprop:Generator_RowDeletingName="EMPLY_PAY_TABLERowDeleting" msprop:Generator_RowChangingName="EMPLY_PAY_TABLERowChanging" msprop:Generator_RowEvHandlerName="EMPLY_PAY_TABLERowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLY_PAY_TABLERowDeleted" msprop:Generator_RowClassName="EMPLY_PAY_TABLERow" msprop:Generator_UserTableName="EMPLY_PAY_TABLE" msprop:Generator_RowEvArgName="EMPLY_PAY_TABLERowChangeEvent">
+        <xs:element name="EMPLY_PAY_TABLE" msprop:Generator_TableClassName="EMPLY_PAY_TABLEDataTable" msprop:Generator_TableVarName="tableEMPLY_PAY_TABLE" msprop:Generator_TablePropName="EMPLY_PAY_TABLE" msprop:Generator_RowDeletingName="EMPLY_PAY_TABLERowDeleting" msprop:Generator_RowChangingName="EMPLY_PAY_TABLERowChanging" msprop:Generator_RowEvHandlerName="EMPLY_PAY_TABLERowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLY_PAY_TABLERowDeleted" msprop:Generator_UserTableName="EMPLY_PAY_TABLE" msprop:Generator_RowChangedName="EMPLY_PAY_TABLERowChanged" msprop:Generator_RowEvArgName="EMPLY_PAY_TABLERowChangeEvent" msprop:Generator_RowClassName="EMPLY_PAY_TABLERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnFIRST_NAME" msprop:Generator_ColumnPropNameInRow="FIRST_NAME" msprop:Generator_ColumnPropNameInTable="FIRST_NAMEColumn" msprop:Generator_UserColumnName="FIRST_NAME" minOccurs="0">
@@ -584,7 +617,7 @@ WHERE        (? = 1 AND FIRST_NAME IS NULL OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MANAGEMENT" msprop:Generator_TableClassName="MANAGEMENTDataTable" msprop:Generator_TableVarName="tableMANAGEMENT" msprop:Generator_RowChangedName="MANAGEMENTRowChanged" msprop:Generator_TablePropName="MANAGEMENT" msprop:Generator_RowDeletingName="MANAGEMENTRowDeleting" msprop:Generator_RowChangingName="MANAGEMENTRowChanging" msprop:Generator_RowEvHandlerName="MANAGEMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="MANAGEMENTRowDeleted" msprop:Generator_RowClassName="MANAGEMENTRow" msprop:Generator_UserTableName="MANAGEMENT" msprop:Generator_RowEvArgName="MANAGEMENTRowChangeEvent">
+        <xs:element name="MANAGEMENT" msprop:Generator_TableClassName="MANAGEMENTDataTable" msprop:Generator_TableVarName="tableMANAGEMENT" msprop:Generator_TablePropName="MANAGEMENT" msprop:Generator_RowDeletingName="MANAGEMENTRowDeleting" msprop:Generator_RowChangingName="MANAGEMENTRowChanging" msprop:Generator_RowEvHandlerName="MANAGEMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="MANAGEMENTRowDeleted" msprop:Generator_UserTableName="MANAGEMENT" msprop:Generator_RowChangedName="MANAGEMENTRowChanged" msprop:Generator_RowEvArgName="MANAGEMENTRowChangeEvent" msprop:Generator_RowClassName="MANAGEMENTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnFIRST_NAME" msprop:Generator_ColumnPropNameInRow="FIRST_NAME" msprop:Generator_ColumnPropNameInTable="FIRST_NAMEColumn" msprop:Generator_UserColumnName="FIRST_NAME" minOccurs="0">
@@ -620,7 +653,7 @@ WHERE        (? = 1 AND FIRST_NAME IS NULL OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ROOMS" msprop:Generator_TableClassName="ROOMSDataTable" msprop:Generator_TableVarName="tableROOMS" msprop:Generator_RowChangedName="ROOMSRowChanged" msprop:Generator_TablePropName="ROOMS" msprop:Generator_RowDeletingName="ROOMSRowDeleting" msprop:Generator_RowChangingName="ROOMSRowChanging" msprop:Generator_RowEvHandlerName="ROOMSRowChangeEventHandler" msprop:Generator_RowDeletedName="ROOMSRowDeleted" msprop:Generator_RowClassName="ROOMSRow" msprop:Generator_UserTableName="ROOMS" msprop:Generator_RowEvArgName="ROOMSRowChangeEvent">
+        <xs:element name="ROOMS" msprop:Generator_TableClassName="ROOMSDataTable" msprop:Generator_TableVarName="tableROOMS" msprop:Generator_TablePropName="ROOMS" msprop:Generator_RowDeletingName="ROOMSRowDeleting" msprop:Generator_RowChangingName="ROOMSRowChanging" msprop:Generator_RowEvHandlerName="ROOMSRowChangeEventHandler" msprop:Generator_RowDeletedName="ROOMSRowDeleted" msprop:Generator_UserTableName="ROOMS" msprop:Generator_RowChangedName="ROOMSRowChanged" msprop:Generator_RowEvArgName="ROOMSRowChangeEvent" msprop:Generator_RowClassName="ROOMSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ROOM_x0023_" msprop:Generator_ColumnVarNameInTable="_columnROOM_" msprop:Generator_ColumnPropNameInRow="_ROOM_" msprop:Generator_ColumnPropNameInTable="_ROOM_Column" msprop:Generator_UserColumnName="ROOM#" type="xs:short" />
@@ -664,7 +697,7 @@ WHERE        (? = 1 AND FIRST_NAME IS NULL OR
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="EMPLOYEEMANAGEMENT" msdata:parent="EMPLOYEE" msdata:child="MANAGEMENT" msdata:parentkey="SSN" msdata:childkey="SSN" msprop:Generator_UserChildTable="MANAGEMENT" msprop:Generator_ChildPropName="GetMANAGEMENTRows" msprop:Generator_UserRelationName="EMPLOYEEMANAGEMENT" msprop:Generator_RelationVarName="relationEMPLOYEEMANAGEMENT" msprop:Generator_UserParentTable="EMPLOYEE" msprop:Generator_ParentPropName="EMPLOYEERow" />
+      <msdata:Relationship name="EMPLOYEEMANAGEMENT" msdata:parent="EMPLOYEE" msdata:child="MANAGEMENT" msdata:parentkey="SSN" msdata:childkey="SSN" msprop:Generator_UserChildTable="MANAGEMENT" msprop:Generator_ChildPropName="GetMANAGEMENTRows" msprop:Generator_UserRelationName="EMPLOYEEMANAGEMENT" msprop:Generator_ParentPropName="EMPLOYEERow" msprop:Generator_RelationVarName="relationEMPLOYEEMANAGEMENT" msprop:Generator_UserParentTable="EMPLOYEE" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -14,7 +14,12 @@ Public Class HomePage
     End Sub
 
     Private Sub ResButton_Click(sender As Object, e As EventArgs) Handles ResButton.Click
+        EmployeePanel.Visible = False
+        MaintenancePanel.Visible = False
+        ChkOutPanel.Visible = False
+        ChkInPanel.Visible = False
         HomePanel.Visible = False
+
         ReservationPanel.Visible = True
     End Sub
 
@@ -29,6 +34,8 @@ Public Class HomePage
         Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
         'TODO: This line of code loads data into the 'HOTEL_DBDataSet.CUSTOMER' table. You can move, or remove it, as needed.
         Me.CUSTOMERTableAdapter.Fill(Me.HOTEL_DBDataSet.CUSTOMER)
+        Me.ROOMSTableAdapter.Fill(Me.HOTEL_DBDataSet.ROOMS)
+
 
         'Turn off all other panels
         EmployeePanel.Visible = False
@@ -64,7 +71,7 @@ Public Class HomePage
 
     End Sub
 
-    Private Sub bttnUpdateEmplyTbl_Click(sender As Object, e As EventArgs) Handles bttnUpdateEmplyTbl.Click
+    Private Sub bttnUpdateEmplyTbl_Click(sender As Object, e As EventArgs)
 
         Me.EMPLOYEEBindingSource3.EndEdit()
         Me.EMPLOYEETableAdapter.Fill(Me.HOTEL_DBDataSet.EMPLOYEE)
@@ -127,7 +134,31 @@ Public Class HomePage
         ChkInPanel.Visible = True
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnEmplyDGV_Click(sender As Object, e As EventArgs) Handles btnEmplyDGV.Click
         EMPLOYEEBindingSource3.AddNew()
+    End Sub
+
+    Private Sub btnRoomsDGV_Click(sender As Object, e As EventArgs) Handles btnRoomsDGV.Click
+        ROOMSBindingSource2.AddNew()
+
+    End Sub
+
+    Private Sub btnChkOutDGV_Click(sender As Object, e As EventArgs) Handles btnChkOutDGV.Click
+        CUSTOMERBindingSource1.AddNew()
+
+    End Sub
+
+    Private Sub btnChkInDGV_Click(sender As Object, e As EventArgs) Handles btnChkInDGV.Click
+        CUSTOMERBindingSource2.AddNew()
+
+    End Sub
+
+    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs)
+        Try
+            Me.CUSTOMERTableAdapter.FillBy(Me.HOTEL_DBDataSet.CUSTOMER)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 End Class
