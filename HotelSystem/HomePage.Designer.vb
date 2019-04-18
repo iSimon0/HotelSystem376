@@ -163,7 +163,7 @@ Partial Class HomePage
         '
         'HomeButton
         '
-        Me.HomeButton.BackgroundImage = CType(resources.GetObject("HomeButton.BackgroundImage"), System.Drawing.Image)
+        Me.HomeButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.HomeNew
         Me.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.HomeButton.FlatAppearance.BorderSize = 0
         Me.HomeButton.Location = New System.Drawing.Point(38, 117)
@@ -175,7 +175,7 @@ Partial Class HomePage
         '
         'ResButton
         '
-        Me.ResButton.BackgroundImage = CType(resources.GetObject("ResButton.BackgroundImage"), System.Drawing.Image)
+        Me.ResButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.resrv3
         Me.ResButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ResButton.FlatAppearance.BorderColor = System.Drawing.Color.Lime
         Me.ResButton.FlatAppearance.BorderSize = 0
@@ -188,7 +188,7 @@ Partial Class HomePage
         '
         'CheckInButton
         '
-        Me.CheckInButton.BackgroundImage = CType(resources.GetObject("CheckInButton.BackgroundImage"), System.Drawing.Image)
+        Me.CheckInButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.CHEKiNnew
         Me.CheckInButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CheckInButton.Location = New System.Drawing.Point(38, 281)
         Me.CheckInButton.Margin = New System.Windows.Forms.Padding(4)
@@ -199,7 +199,7 @@ Partial Class HomePage
         '
         'CheckOutButton
         '
-        Me.CheckOutButton.BackgroundImage = CType(resources.GetObject("CheckOutButton.BackgroundImage"), System.Drawing.Image)
+        Me.CheckOutButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.CHKoUTnew
         Me.CheckOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CheckOutButton.Location = New System.Drawing.Point(38, 364)
         Me.CheckOutButton.Margin = New System.Windows.Forms.Padding(4)
@@ -210,7 +210,7 @@ Partial Class HomePage
         '
         'MaintenanceButton
         '
-        Me.MaintenanceButton.BackgroundImage = CType(resources.GetObject("MaintenanceButton.BackgroundImage"), System.Drawing.Image)
+        Me.MaintenanceButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.MAIN111
         Me.MaintenanceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MaintenanceButton.Location = New System.Drawing.Point(38, 446)
         Me.MaintenanceButton.Margin = New System.Windows.Forms.Padding(4)
@@ -221,7 +221,7 @@ Partial Class HomePage
         '
         'EmployeeButton
         '
-        Me.EmployeeButton.BackgroundImage = CType(resources.GetObject("EmployeeButton.BackgroundImage"), System.Drawing.Image)
+        Me.EmployeeButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.EMPLYbTN
         Me.EmployeeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.EmployeeButton.Location = New System.Drawing.Point(38, 527)
         Me.EmployeeButton.Margin = New System.Windows.Forms.Padding(4)
@@ -232,7 +232,7 @@ Partial Class HomePage
         '
         'LogoutButton
         '
-        Me.LogoutButton.BackgroundImage = CType(resources.GetObject("LogoutButton.BackgroundImage"), System.Drawing.Image)
+        Me.LogoutButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources._EXIT
         Me.LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.LogoutButton.Location = New System.Drawing.Point(869, 595)
         Me.LogoutButton.Margin = New System.Windows.Forms.Padding(4)
@@ -1005,12 +1005,12 @@ Partial Class HomePage
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
+        Me.PictureBox1.ErrorImage = Nothing
+        Me.PictureBox1.Image = Global.HotelSystem.My.Resources.Resources.LogoNEW
+        Me.PictureBox1.InitialImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(3, 6)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(411, 92)
+        Me.PictureBox1.Size = New System.Drawing.Size(303, 66)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
@@ -1019,7 +1019,7 @@ Partial Class HomePage
         '
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Image = Global.HotelSystem.My.Resources.Resources.ximg
         Me.PictureBox2.Location = New System.Drawing.Point(938, 6)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(71, 31)

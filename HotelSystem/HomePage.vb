@@ -173,9 +173,6 @@ Public Class HomePage
 
     End Sub
 
-    Private Sub PictureBox2_MouseHover(sender As Object, e As EventArgs) Handles PictureBox2.MouseHover
-        PictureBox2.Image = Image.FromFile("C:\Users\alsay\Documents\GitHub\HotelSystem376\HotelSystem\HOTEL_IMGS\ximg.jpg")
-    End Sub
 
 
     'On mouse click and movement, move window.

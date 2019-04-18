@@ -148,6 +148,16 @@
     <Content Include="HOTEL_DB.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\LogoNEW.PNG" />
+    <None Include="Resources\ximg.jpg" />
+    <None Include="Resources\ximgFIRST.jpg" />
+    <None Include="Resources\EXIT.PNG" />
+    <None Include="Resources\EMPLYbTN.PNG" />
+    <None Include="Resources\MAIN111.PNG" />
+    <None Include="Resources\CHKoUTnew.PNG" />
+    <None Include="Resources\CHEKiNnew.PNG" />
+    <None Include="Resources\resrv3.PNG" />
+    <None Include="Resources\HomeNew.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
