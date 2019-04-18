@@ -1885,13 +1885,13 @@ Partial Public Class HOTEL_DBDataSet
         
         Private columnCOST As Global.System.Data.DataColumn
         
-        Private columnOCCUPIED As Global.System.Data.DataColumn
-        
         Private columnDATE_OCCUPIED As Global.System.Data.DataColumn
         
         Private columnTIME_OCCUPIED As Global.System.Data.DataColumn
         
         Private _columnOCCUPANT_ID_ As Global.System.Data.DataColumn
+        
+        Private columnCLEAN As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -1954,14 +1954,6 @@ Partial Public Class HOTEL_DBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property OCCUPIEDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnOCCUPIED
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property DATE_OCCUPIEDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnDATE_OCCUPIED
@@ -1981,6 +1973,14 @@ Partial Public Class HOTEL_DBDataSet
         Public ReadOnly Property _OCCUPANT_ID_Column() As Global.System.Data.DataColumn
             Get
                 Return Me._columnOCCUPANT_ID_
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CLEANColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCLEAN
             End Get
         End Property
         
@@ -2021,9 +2021,9 @@ Partial Public Class HOTEL_DBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddROOMSRow(ByVal _ROOM_ As Short, ByVal TYPE As String, ByVal COST As Decimal, ByVal OCCUPIED As Boolean, ByVal DATE_OCCUPIED As Date, ByVal TIME_OCCUPIED As Date, ByVal _OCCUPANT_ID_ As Short) As ROOMSRow
+        Public Overloads Function AddROOMSRow(ByVal _ROOM_ As Short, ByVal TYPE As String, ByVal COST As Decimal, ByVal DATE_OCCUPIED As Date, ByVal TIME_OCCUPIED As Date, ByVal _OCCUPANT_ID_ As Short, ByVal CLEAN As Boolean) As ROOMSRow
             Dim rowROOMSRow As ROOMSRow = CType(Me.NewRow,ROOMSRow)
-            Dim columnValuesArray() As Object = New Object() {_ROOM_, TYPE, COST, OCCUPIED, DATE_OCCUPIED, TIME_OCCUPIED, _OCCUPANT_ID_}
+            Dim columnValuesArray() As Object = New Object() {_ROOM_, TYPE, COST, DATE_OCCUPIED, TIME_OCCUPIED, _OCCUPANT_ID_, CLEAN}
             rowROOMSRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowROOMSRow)
             Return rowROOMSRow
@@ -2055,10 +2055,10 @@ Partial Public Class HOTEL_DBDataSet
             Me._columnROOM_ = MyBase.Columns("ROOM#")
             Me.columnTYPE = MyBase.Columns("TYPE")
             Me.columnCOST = MyBase.Columns("COST")
-            Me.columnOCCUPIED = MyBase.Columns("OCCUPIED")
             Me.columnDATE_OCCUPIED = MyBase.Columns("DATE_OCCUPIED")
             Me.columnTIME_OCCUPIED = MyBase.Columns("TIME_OCCUPIED")
             Me._columnOCCUPANT_ID_ = MyBase.Columns("OCCUPANT_ID#")
+            Me.columnCLEAN = MyBase.Columns("CLEAN")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2072,8 +2072,6 @@ Partial Public Class HOTEL_DBDataSet
             MyBase.Columns.Add(Me.columnTYPE)
             Me.columnCOST = New Global.System.Data.DataColumn("COST", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCOST)
-            Me.columnOCCUPIED = New Global.System.Data.DataColumn("OCCUPIED", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnOCCUPIED)
             Me.columnDATE_OCCUPIED = New Global.System.Data.DataColumn("DATE_OCCUPIED", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDATE_OCCUPIED)
             Me.columnTIME_OCCUPIED = New Global.System.Data.DataColumn("TIME_OCCUPIED", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
@@ -2082,6 +2080,8 @@ Partial Public Class HOTEL_DBDataSet
             Me._columnOCCUPANT_ID_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnOCCUPANT_ID_")
             Me._columnOCCUPANT_ID_.ExtendedProperties.Add("Generator_UserColumnName", "OCCUPANT_ID#")
             MyBase.Columns.Add(Me._columnOCCUPANT_ID_)
+            Me.columnCLEAN = New Global.System.Data.DataColumn("CLEAN", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCLEAN)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me._columnROOM_}, true))
             Me._columnROOM_.AllowDBNull = false
             Me._columnROOM_.Unique = true
@@ -3185,21 +3185,6 @@ Partial Public Class HOTEL_DBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property OCCUPIED() As Boolean
-            Get
-                Try 
-                    Return CType(Me(Me.tableROOMS.OCCUPIEDColumn),Boolean)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'OCCUPIED' in table 'ROOMS' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableROOMS.OCCUPIEDColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property DATE_OCCUPIED() As Date
             Get
                 Try 
@@ -3245,6 +3230,21 @@ Partial Public Class HOTEL_DBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CLEAN() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableROOMS.CLEANColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CLEAN' in table 'ROOMS' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableROOMS.CLEANColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsTYPENull() As Boolean
             Return Me.IsNull(Me.tableROOMS.TYPEColumn)
         End Function
@@ -3265,18 +3265,6 @@ Partial Public Class HOTEL_DBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetCOSTNull()
             Me(Me.tableROOMS.COSTColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsOCCUPIEDNull() As Boolean
-            Return Me.IsNull(Me.tableROOMS.OCCUPIEDColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetOCCUPIEDNull()
-            Me(Me.tableROOMS.OCCUPIEDColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3313,6 +3301,18 @@ Partial Public Class HOTEL_DBDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub Set_OCCUPANT_ID_Null()
             Me(Me.tableROOMS._OCCUPANT_ID_Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCLEANNull() As Boolean
+            Return Me.IsNull(Me.tableROOMS.CLEANColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCLEANNull()
+            Me(Me.tableROOMS.CLEANColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -5837,74 +5837,74 @@ Namespace HOTEL_DBDataSetTableAdapters
             tableMapping.ColumnMappings.Add("ROOM#", "ROOM#")
             tableMapping.ColumnMappings.Add("TYPE", "TYPE")
             tableMapping.ColumnMappings.Add("COST", "COST")
-            tableMapping.ColumnMappings.Add("OCCUPIED", "OCCUPIED")
             tableMapping.ColumnMappings.Add("DATE_OCCUPIED", "DATE_OCCUPIED")
             tableMapping.ColumnMappings.Add("TIME_OCCUPIED", "TIME_OCCUPIED")
             tableMapping.ColumnMappings.Add("OCCUPANT_ID#", "OCCUPANT_ID#")
+            tableMapping.ColumnMappings.Add("CLEAN", "CLEAN")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `ROOMS` WHERE ((`ROOM#` = ?) AND ((? = 1 AND `TYPE` IS NULL) OR (`TYP"& _ 
-                "E` = ?)) AND ((? = 1 AND `COST` IS NULL) OR (`COST` = ?)) AND ((? = 1 AND `OCCUP"& _ 
-                "IED` IS NULL) OR (`OCCUPIED` = ?)) AND ((? = 1 AND `DATE_OCCUPIED` IS NULL) OR ("& _ 
-                "`DATE_OCCUPIED` = ?)) AND ((? = 1 AND `TIME_OCCUPIED` IS NULL) OR (`TIME_OCCUPIE"& _ 
-                "D` = ?)) AND ((? = 1 AND `OCCUPANT_ID#` IS NULL) OR (`OCCUPANT_ID#` = ?)))"
+                "E` = ?)) AND ((? = 1 AND `COST` IS NULL) OR (`COST` = ?)) AND ((? = 1 AND `DATE_"& _ 
+                "OCCUPIED` IS NULL) OR (`DATE_OCCUPIED` = ?)) AND ((? = 1 AND `TIME_OCCUPIED` IS "& _ 
+                "NULL) OR (`TIME_OCCUPIED` = ?)) AND ((? = 1 AND `OCCUPANT_ID#` IS NULL) OR (`OCC"& _ 
+                "UPANT_ID#` = ?)) AND ((? = 1 AND `CLEAN` IS NULL) OR (`CLEAN` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ROOM#", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ROOM#", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TYPE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TYPE", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TYPE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TYPE", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_COST", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COST", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_COST", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COST", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPIED", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPIED", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DATE_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DATE_OCCUPIED", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DATE_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DATE_OCCUPIED", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TIME_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TIME_OCCUPIED", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TIME_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TIME_OCCUPIED", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_OCCUPANT_ID#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPANT_ID#", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_OCCUPANT_ID#", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPANT_ID#", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CLEAN", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLEAN", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CLEAN", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLEAN", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `ROOMS` (`ROOM#`, `TYPE`, `COST`, `OCCUPIED`, `DATE_OCCUPIED`, `TIME_"& _ 
-                "OCCUPIED`, `OCCUPANT_ID#`) VALUES (?, ?, ?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `ROOMS` (`ROOM#`, `TYPE`, `COST`, `DATE_OCCUPIED`, `TIME_OCCUPIED`, `"& _ 
+                "OCCUPANT_ID#`, `CLEAN`) VALUES (?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ROOM#", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ROOM#", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TYPE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TYPE", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("COST", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COST", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OCCUPIED", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPIED", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DATE_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DATE_OCCUPIED", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TIME_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TIME_OCCUPIED", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OCCUPANT_ID#", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPANT_ID#", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLEAN", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLEAN", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `ROOMS` SET `ROOM#` = ?, `TYPE` = ?, `COST` = ?, `OCCUPIED` = ?, `DATE_OCC"& _ 
-                "UPIED` = ?, `TIME_OCCUPIED` = ?, `OCCUPANT_ID#` = ? WHERE ((`ROOM#` = ?) AND ((?"& _ 
-                " = 1 AND `TYPE` IS NULL) OR (`TYPE` = ?)) AND ((? = 1 AND `COST` IS NULL) OR (`C"& _ 
-                "OST` = ?)) AND ((? = 1 AND `OCCUPIED` IS NULL) OR (`OCCUPIED` = ?)) AND ((? = 1 "& _ 
-                "AND `DATE_OCCUPIED` IS NULL) OR (`DATE_OCCUPIED` = ?)) AND ((? = 1 AND `TIME_OCC"& _ 
-                "UPIED` IS NULL) OR (`TIME_OCCUPIED` = ?)) AND ((? = 1 AND `OCCUPANT_ID#` IS NULL"& _ 
-                ") OR (`OCCUPANT_ID#` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `ROOMS` SET `ROOM#` = ?, `TYPE` = ?, `COST` = ?, `DATE_OCCUPIED` = ?, `TIM"& _ 
+                "E_OCCUPIED` = ?, `OCCUPANT_ID#` = ?, `CLEAN` = ? WHERE ((`ROOM#` = ?) AND ((? = "& _ 
+                "1 AND `TYPE` IS NULL) OR (`TYPE` = ?)) AND ((? = 1 AND `COST` IS NULL) OR (`COST"& _ 
+                "` = ?)) AND ((? = 1 AND `DATE_OCCUPIED` IS NULL) OR (`DATE_OCCUPIED` = ?)) AND ("& _ 
+                "(? = 1 AND `TIME_OCCUPIED` IS NULL) OR (`TIME_OCCUPIED` = ?)) AND ((? = 1 AND `O"& _ 
+                "CCUPANT_ID#` IS NULL) OR (`OCCUPANT_ID#` = ?)) AND ((? = 1 AND `CLEAN` IS NULL) "& _ 
+                "OR (`CLEAN` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ROOM#", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ROOM#", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TYPE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TYPE", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("COST", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COST", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OCCUPIED", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPIED", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DATE_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DATE_OCCUPIED", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TIME_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TIME_OCCUPIED", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("OCCUPANT_ID#", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPANT_ID#", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLEAN", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLEAN", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ROOM#", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ROOM#", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TYPE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TYPE", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TYPE", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TYPE", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_COST", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COST", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_COST", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "COST", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPIED", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPIED", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DATE_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DATE_OCCUPIED", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DATE_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DATE_OCCUPIED", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_TIME_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TIME_OCCUPIED", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_TIME_OCCUPIED", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TIME_OCCUPIED", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_OCCUPANT_ID#", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPANT_ID#", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_OCCUPANT_ID#", Global.System.Data.OleDb.OleDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "OCCUPANT_ID#", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CLEAN", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLEAN", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CLEAN", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CLEAN", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5920,8 +5920,8 @@ Namespace HOTEL_DBDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [ROOM#], TYPE, COST, OCCUPIED, DATE_OCCUPIED, TIME_OCCUPIED, [OCCUPANT_ID#"& _ 
-                "] FROM ROOMS"
+            Me._commandCollection(0).CommandText = "SELECT [ROOM#], TYPE, COST, DATE_OCCUPIED, TIME_OCCUPIED, [OCCUPANT_ID#], CLEAN F"& _ 
+                "ROM ROOMS"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5981,34 +5981,45 @@ Namespace HOTEL_DBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal _Original_ROOM_ As Short, ByVal Original_TYPE As String, ByVal Original_COST As Decimal, ByVal Original_OCCUPIED As Boolean, ByVal Original_DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal Original_TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _Original_OCCUPANT_ID_ As Short) As Integer
+        Public Overloads Overridable Function Delete(ByVal _Original_ROOM_ As Short, ByVal Original_TYPE As String, ByVal Original_COST As Global.System.Nullable(Of Decimal), ByVal Original_DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal Original_TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _Original_OCCUPANT_ID_ As Global.System.Nullable(Of Short), ByVal Original_CLEAN As Boolean) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(_Original_ROOM_,Short)
             If (Original_TYPE Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_TYPE")
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_TYPE,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_COST,Decimal)
-            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_OCCUPIED,Boolean)
+            If (Original_COST.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_COST.Value,Decimal)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
             If (Original_DATE_OCCUPIED.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_DATE_OCCUPIED.Value,Date)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Original_TIME_OCCUPIED.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_DATE_OCCUPIED.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_TIME_OCCUPIED.Value,Date)
             Else
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (Original_TIME_OCCUPIED.HasValue = true) Then
+            If (_Original_OCCUPANT_ID_.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_TIME_OCCUPIED.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(_Original_OCCUPANT_ID_.Value,Short)
             Else
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
             Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-            Me.Adapter.DeleteCommand.Parameters(12).Value = CType(_Original_OCCUPANT_ID_,Short)
+            Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_CLEAN,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6028,26 +6039,34 @@ Namespace HOTEL_DBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal _ROOM_ As Short, ByVal TYPE As String, ByVal COST As Decimal, ByVal OCCUPIED As Boolean, ByVal DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _OCCUPANT_ID_ As Short) As Integer
+        Public Overloads Overridable Function Insert(ByVal _ROOM_ As Short, ByVal TYPE As String, ByVal COST As Global.System.Nullable(Of Decimal), ByVal DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _OCCUPANT_ID_ As Global.System.Nullable(Of Short), ByVal CLEAN As Boolean) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(_ROOM_,Short)
             If (TYPE Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("TYPE")
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(TYPE,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(COST,Decimal)
-            Me.Adapter.InsertCommand.Parameters(3).Value = CType(OCCUPIED,Boolean)
+            If (COST.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(COST.Value,Decimal)
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
             If (DATE_OCCUPIED.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(DATE_OCCUPIED.Value,Date)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(DATE_OCCUPIED.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (TIME_OCCUPIED.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(TIME_OCCUPIED.Value,Date)
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (TIME_OCCUPIED.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(TIME_OCCUPIED.Value,Date)
+            If (_OCCUPANT_ID_.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(_OCCUPANT_ID_.Value,Short)
             Else
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.InsertCommand.Parameters(6).Value = CType(_OCCUPANT_ID_,Short)
+            Me.Adapter.InsertCommand.Parameters(6).Value = CType(CLEAN,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6067,53 +6086,72 @@ Namespace HOTEL_DBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal _ROOM_ As Short, ByVal TYPE As String, ByVal COST As Decimal, ByVal OCCUPIED As Boolean, ByVal DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _OCCUPANT_ID_ As Short, ByVal _Original_ROOM_ As Short, ByVal Original_TYPE As String, ByVal Original_COST As Decimal, ByVal Original_OCCUPIED As Boolean, ByVal Original_DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal Original_TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _Original_OCCUPANT_ID_ As Short) As Integer
+        Public Overloads Overridable Function Update(ByVal _ROOM_ As Short, ByVal TYPE As String, ByVal COST As Global.System.Nullable(Of Decimal), ByVal DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _OCCUPANT_ID_ As Global.System.Nullable(Of Short), ByVal CLEAN As Boolean, ByVal _Original_ROOM_ As Short, ByVal Original_TYPE As String, ByVal Original_COST As Global.System.Nullable(Of Decimal), ByVal Original_DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal Original_TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _Original_OCCUPANT_ID_ As Global.System.Nullable(Of Short), ByVal Original_CLEAN As Boolean) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(_ROOM_,Short)
             If (TYPE Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("TYPE")
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(TYPE,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(COST,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(OCCUPIED,Boolean)
+            If (COST.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(COST.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
             If (DATE_OCCUPIED.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(DATE_OCCUPIED.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(DATE_OCCUPIED.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (TIME_OCCUPIED.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(TIME_OCCUPIED.Value,Date)
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (TIME_OCCUPIED.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(TIME_OCCUPIED.Value,Date)
+            If (_OCCUPANT_ID_.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(_OCCUPANT_ID_.Value,Short)
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(_OCCUPANT_ID_,Short)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(CLEAN,Boolean)
             Me.Adapter.UpdateCommand.Parameters(7).Value = CType(_Original_ROOM_,Short)
             If (Original_TYPE Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_TYPE")
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_TYPE,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_COST,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_OCCUPIED,Boolean)
+            If (Original_COST.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_COST.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
             If (Original_DATE_OCCUPIED.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_DATE_OCCUPIED.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (Original_TIME_OCCUPIED.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_DATE_OCCUPIED.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_TIME_OCCUPIED.Value,Date)
             Else
                 Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
-            If (Original_TIME_OCCUPIED.HasValue = true) Then
+            If (_Original_OCCUPANT_ID_.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_TIME_OCCUPIED.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(_Original_OCCUPANT_ID_.Value,Short)
             Else
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             End If
             Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(_Original_OCCUPANT_ID_,Short)
+            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_CLEAN,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6133,8 +6171,8 @@ Namespace HOTEL_DBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal TYPE As String, ByVal COST As Decimal, ByVal OCCUPIED As Boolean, ByVal DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _OCCUPANT_ID_ As Short, ByVal _Original_ROOM_ As Short, ByVal Original_TYPE As String, ByVal Original_COST As Decimal, ByVal Original_OCCUPIED As Boolean, ByVal Original_DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal Original_TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _Original_OCCUPANT_ID_ As Short) As Integer
-            Return Me.Update(_Original_ROOM_, TYPE, COST, OCCUPIED, DATE_OCCUPIED, TIME_OCCUPIED, _OCCUPANT_ID_, _Original_ROOM_, Original_TYPE, Original_COST, Original_OCCUPIED, Original_DATE_OCCUPIED, Original_TIME_OCCUPIED, _Original_OCCUPANT_ID_)
+        Public Overloads Overridable Function Update(ByVal TYPE As String, ByVal COST As Global.System.Nullable(Of Decimal), ByVal DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _OCCUPANT_ID_ As Global.System.Nullable(Of Short), ByVal CLEAN As Boolean, ByVal _Original_ROOM_ As Short, ByVal Original_TYPE As String, ByVal Original_COST As Global.System.Nullable(Of Decimal), ByVal Original_DATE_OCCUPIED As Global.System.Nullable(Of Date), ByVal Original_TIME_OCCUPIED As Global.System.Nullable(Of Date), ByVal _Original_OCCUPANT_ID_ As Global.System.Nullable(Of Short), ByVal Original_CLEAN As Boolean) As Integer
+            Return Me.Update(_Original_ROOM_, TYPE, COST, DATE_OCCUPIED, TIME_OCCUPIED, _OCCUPANT_ID_, CLEAN, _Original_ROOM_, Original_TYPE, Original_COST, Original_DATE_OCCUPIED, Original_TIME_OCCUPIED, _Original_OCCUPANT_ID_, Original_CLEAN)
         End Function
     End Class
     
