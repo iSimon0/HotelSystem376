@@ -22,6 +22,7 @@ Partial Class LoginPage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginPage))
         Me.UsernameBox = New System.Windows.Forms.TextBox()
         Me.PasswordBox = New System.Windows.Forms.TextBox()
         Me.LoginButton = New System.Windows.Forms.Button()
@@ -32,16 +33,16 @@ Partial Class LoginPage
         '
         'UsernameBox
         '
-        Me.UsernameBox.Location = New System.Drawing.Point(348, 118)
-        Me.UsernameBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UsernameBox.Location = New System.Drawing.Point(418, 221)
+        Me.UsernameBox.Margin = New System.Windows.Forms.Padding(4)
         Me.UsernameBox.Name = "UsernameBox"
         Me.UsernameBox.Size = New System.Drawing.Size(281, 22)
         Me.UsernameBox.TabIndex = 0
         '
         'PasswordBox
         '
-        Me.PasswordBox.Location = New System.Drawing.Point(348, 151)
-        Me.PasswordBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PasswordBox.Location = New System.Drawing.Point(418, 254)
+        Me.PasswordBox.Margin = New System.Windows.Forms.Padding(4)
         Me.PasswordBox.Name = "PasswordBox"
         Me.PasswordBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordBox.Size = New System.Drawing.Size(281, 22)
@@ -50,8 +51,8 @@ Partial Class LoginPage
         '
         'LoginButton
         '
-        Me.LoginButton.Location = New System.Drawing.Point(531, 183)
-        Me.LoginButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LoginButton.Location = New System.Drawing.Point(601, 286)
+        Me.LoginButton.Margin = New System.Windows.Forms.Padding(4)
         Me.LoginButton.Name = "LoginButton"
         Me.LoginButton.Size = New System.Drawing.Size(100, 28)
         Me.LoginButton.TabIndex = 2
@@ -62,7 +63,7 @@ Partial Class LoginPage
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(269, 80)
+        Me.Label1.Location = New System.Drawing.Point(339, 183)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 24)
@@ -72,7 +73,7 @@ Partial Class LoginPage
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(269, 122)
+        Me.Label2.Location = New System.Drawing.Point(339, 225)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 17)
@@ -82,7 +83,7 @@ Partial Class LoginPage
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(269, 155)
+        Me.Label3.Location = New System.Drawing.Point(339, 258)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 17)
@@ -94,6 +95,7 @@ Partial Class LoginPage
         Me.AcceptButton = Me.LoginButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -101,7 +103,7 @@ Partial Class LoginPage
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.PasswordBox)
         Me.Controls.Add(Me.UsernameBox)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "LoginPage"
         Me.Text = "Hotel Master"
         Me.ResumeLayout(False)

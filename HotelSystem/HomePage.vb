@@ -8,7 +8,7 @@ Public Class HomePage
     Private Access As New DBControl
 
 
-    Private Sub RefreshHomeInfo_Click(sender As Object, e As EventArgs) Handles RefreshHomeInfo.Click
+    Private Sub RefreshHomeInfo_Click(sender As Object, e As EventArgs) Handles RefreshHomeInfo.Click, PictureBox1.MouseHover
 
         DateLabel.Text = System.DateTime.Now.ToString("dd MMMM yyyy")
     End Sub
@@ -79,6 +79,9 @@ Public Class HomePage
     End Sub
 
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
+
+
+
         'Turn off all other panels
         EmployeePanel.Visible = False
         MaintenancePanel.Visible = False
@@ -161,4 +164,6 @@ Public Class HomePage
         End Try
 
     End Sub
+
+
 End Class
