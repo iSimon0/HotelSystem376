@@ -7,6 +7,9 @@ Public Class HomePage
     'DBControl 
     Private Access As New DBControl
 
+    'Mouse click to move window
+    Private m_MoveStartPos As Point
+    Private m_MouseDown As Boolean
 
     Private Sub RefreshHomeInfo_Click(sender As Object, e As EventArgs) Handles RefreshHomeInfo.Click, PictureBox1.MouseHover
 
@@ -165,5 +168,55 @@ Public Class HomePage
 
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.Close()
+
+    End Sub
+
+    Private Sub PictureBox2_MouseHover(sender As Object, e As EventArgs) Handles PictureBox2.MouseHover
+        PictureBox2.Image = Image.FromFile("C:\Users\alsay\Documents\GitHub\HotelSystem376\HotelSystem\HOTEL_IMGS\ximg.jpg")
+    End Sub
+
+
+    'On mouse click and movement, move window.
+    Protected Overrides Sub OnMouseDown(ByVal e As MouseEventArgs)
+
+        If e.Button = System.Windows.Forms.MouseButtons.Left Then
+
+            m_MouseDown = True
+
+            m_MoveStartPos = e.Location
+
+        End If
+
+        'The following line is commented out so that my UserControl doesn't take the focus away from other controls on the Form.
+
+        'MyBase.OnMouseDown(e)
+
+    End Sub 'OnMouseDown
+
+    Protected Overrides Sub OnMouseMove(ByVal e As MouseEventArgs)
+
+        If m_MouseDown Then
+
+            Me.Location = New Point(Me.Location.X + e.X - m_MoveStartPos.X, Me.Location.Y + e.Y - m_MoveStartPos.Y)
+
+        End If
+
+        MyBase.OnMouseMove(e)
+
+    End Sub 'OnMouseMove
+
+    Protected Overrides Sub OnMouseUp(ByVal e As MouseEventArgs)
+
+        If e.Button = System.Windows.Forms.MouseButtons.Left Then
+
+            m_MouseDown = False
+
+        End If
+
+        MyBase.OnMouseUp(e)
+
+    End Sub 'OnMouseUp
 
 End Class

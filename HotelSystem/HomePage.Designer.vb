@@ -131,6 +131,8 @@ Partial Class HomePage
         Me.EMPLOYEETableAdapter = New HotelSystem.HOTEL_DBDataSetTableAdapters.EMPLOYEETableAdapter()
         Me.CUSTOMERTableAdapter = New HotelSystem.HOTEL_DBDataSetTableAdapters.CUSTOMERTableAdapter()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.HomePanel.SuspendLayout()
         Me.HomeTablePanel.SuspendLayout()
         Me.ReservationPanel.SuspendLayout()
@@ -156,84 +158,94 @@ Partial Class HomePage
         CType(Me.ROOMSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ROOMSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'HomeButton
         '
+        Me.HomeButton.BackgroundImage = CType(resources.GetObject("HomeButton.BackgroundImage"), System.Drawing.Image)
+        Me.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.HomeButton.FlatAppearance.BorderSize = 0
         Me.HomeButton.Location = New System.Drawing.Point(38, 117)
         Me.HomeButton.Margin = New System.Windows.Forms.Padding(4)
         Me.HomeButton.Name = "HomeButton"
-        Me.HomeButton.Size = New System.Drawing.Size(124, 67)
+        Me.HomeButton.Size = New System.Drawing.Size(140, 75)
         Me.HomeButton.TabIndex = 0
-        Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = True
         '
         'ResButton
         '
-        Me.ResButton.Location = New System.Drawing.Point(339, 117)
+        Me.ResButton.BackgroundImage = CType(resources.GetObject("ResButton.BackgroundImage"), System.Drawing.Image)
+        Me.ResButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ResButton.FlatAppearance.BorderColor = System.Drawing.Color.Lime
+        Me.ResButton.FlatAppearance.BorderSize = 0
+        Me.ResButton.Location = New System.Drawing.Point(38, 198)
         Me.ResButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ResButton.Name = "ResButton"
-        Me.ResButton.Size = New System.Drawing.Size(107, 28)
+        Me.ResButton.Size = New System.Drawing.Size(140, 75)
         Me.ResButton.TabIndex = 1
-        Me.ResButton.Text = "Reservations"
         Me.ResButton.UseVisualStyleBackColor = True
         '
         'CheckInButton
         '
-        Me.CheckInButton.Location = New System.Drawing.Point(454, 117)
+        Me.CheckInButton.BackgroundImage = CType(resources.GetObject("CheckInButton.BackgroundImage"), System.Drawing.Image)
+        Me.CheckInButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.CheckInButton.Location = New System.Drawing.Point(38, 281)
         Me.CheckInButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckInButton.Name = "CheckInButton"
-        Me.CheckInButton.Size = New System.Drawing.Size(100, 28)
+        Me.CheckInButton.Size = New System.Drawing.Size(140, 75)
         Me.CheckInButton.TabIndex = 2
-        Me.CheckInButton.Text = "Check-ins"
         Me.CheckInButton.UseVisualStyleBackColor = True
         '
         'CheckOutButton
         '
-        Me.CheckOutButton.Location = New System.Drawing.Point(562, 117)
+        Me.CheckOutButton.BackgroundImage = CType(resources.GetObject("CheckOutButton.BackgroundImage"), System.Drawing.Image)
+        Me.CheckOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.CheckOutButton.Location = New System.Drawing.Point(38, 364)
         Me.CheckOutButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckOutButton.Name = "CheckOutButton"
-        Me.CheckOutButton.Size = New System.Drawing.Size(100, 28)
+        Me.CheckOutButton.Size = New System.Drawing.Size(140, 75)
         Me.CheckOutButton.TabIndex = 3
-        Me.CheckOutButton.Text = "Check-outs"
         Me.CheckOutButton.UseVisualStyleBackColor = True
         '
         'MaintenanceButton
         '
         Me.MaintenanceButton.BackgroundImage = CType(resources.GetObject("MaintenanceButton.BackgroundImage"), System.Drawing.Image)
-        Me.MaintenanceButton.Location = New System.Drawing.Point(670, 117)
+        Me.MaintenanceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.MaintenanceButton.Location = New System.Drawing.Point(38, 446)
         Me.MaintenanceButton.Margin = New System.Windows.Forms.Padding(4)
         Me.MaintenanceButton.Name = "MaintenanceButton"
-        Me.MaintenanceButton.Size = New System.Drawing.Size(112, 28)
+        Me.MaintenanceButton.Size = New System.Drawing.Size(140, 75)
         Me.MaintenanceButton.TabIndex = 4
-        Me.MaintenanceButton.Text = "Rooms"
         Me.MaintenanceButton.UseVisualStyleBackColor = True
         '
         'EmployeeButton
         '
-        Me.EmployeeButton.Location = New System.Drawing.Point(790, 117)
+        Me.EmployeeButton.BackgroundImage = CType(resources.GetObject("EmployeeButton.BackgroundImage"), System.Drawing.Image)
+        Me.EmployeeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.EmployeeButton.Location = New System.Drawing.Point(38, 527)
         Me.EmployeeButton.Margin = New System.Windows.Forms.Padding(4)
         Me.EmployeeButton.Name = "EmployeeButton"
-        Me.EmployeeButton.Size = New System.Drawing.Size(100, 28)
+        Me.EmployeeButton.Size = New System.Drawing.Size(140, 75)
         Me.EmployeeButton.TabIndex = 5
-        Me.EmployeeButton.Text = "Employee"
         Me.EmployeeButton.UseVisualStyleBackColor = True
         '
         'LogoutButton
         '
-        Me.LogoutButton.Location = New System.Drawing.Point(898, 117)
+        Me.LogoutButton.BackgroundImage = CType(resources.GetObject("LogoutButton.BackgroundImage"), System.Drawing.Image)
+        Me.LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.LogoutButton.Location = New System.Drawing.Point(869, 595)
         Me.LogoutButton.Margin = New System.Windows.Forms.Padding(4)
         Me.LogoutButton.Name = "LogoutButton"
-        Me.LogoutButton.Size = New System.Drawing.Size(100, 28)
+        Me.LogoutButton.Size = New System.Drawing.Size(140, 75)
         Me.LogoutButton.TabIndex = 6
-        Me.LogoutButton.Text = "Log out"
         Me.LogoutButton.UseVisualStyleBackColor = True
         '
         'HomePanel
         '
         Me.HomePanel.Controls.Add(Me.RefreshHomeInfo)
         Me.HomePanel.Controls.Add(Me.HomeTablePanel)
-        Me.HomePanel.Location = New System.Drawing.Point(227, 152)
+        Me.HomePanel.Location = New System.Drawing.Point(217, 116)
         Me.HomePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.HomePanel.Name = "HomePanel"
         Me.HomePanel.Size = New System.Drawing.Size(771, 462)
@@ -452,7 +464,7 @@ Partial Class HomePage
         'ReservationPanel
         '
         Me.ReservationPanel.Controls.Add(Me.DataGridCustoTbl)
-        Me.ReservationPanel.Location = New System.Drawing.Point(228, 152)
+        Me.ReservationPanel.Location = New System.Drawing.Point(218, 116)
         Me.ReservationPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ReservationPanel.Name = "ReservationPanel"
         Me.ReservationPanel.Size = New System.Drawing.Size(771, 462)
@@ -563,7 +575,7 @@ Partial Class HomePage
         '
         Me.ChkInPanel.Controls.Add(Me.btnChkInDGV)
         Me.ChkInPanel.Controls.Add(Me.CUSTOMERDataGridView1)
-        Me.ChkInPanel.Location = New System.Drawing.Point(226, 153)
+        Me.ChkInPanel.Location = New System.Drawing.Point(216, 117)
         Me.ChkInPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkInPanel.Name = "ChkInPanel"
         Me.ChkInPanel.Size = New System.Drawing.Size(773, 466)
@@ -676,7 +688,7 @@ Partial Class HomePage
         '
         Me.ChkOutPanel.Controls.Add(Me.btnChkOutDGV)
         Me.ChkOutPanel.Controls.Add(Me.CUSTOMERDataGridView)
-        Me.ChkOutPanel.Location = New System.Drawing.Point(226, 151)
+        Me.ChkOutPanel.Location = New System.Drawing.Point(216, 115)
         Me.ChkOutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkOutPanel.Name = "ChkOutPanel"
         Me.ChkOutPanel.Size = New System.Drawing.Size(793, 472)
@@ -786,7 +798,7 @@ Partial Class HomePage
         '
         Me.MaintenancePanel.Controls.Add(Me.btnRoomsDGV)
         Me.MaintenancePanel.Controls.Add(Me.DataGridMaintenanceTbl)
-        Me.MaintenancePanel.Location = New System.Drawing.Point(227, 154)
+        Me.MaintenancePanel.Location = New System.Drawing.Point(217, 118)
         Me.MaintenancePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.MaintenancePanel.Name = "MaintenancePanel"
         Me.MaintenancePanel.Size = New System.Drawing.Size(772, 460)
@@ -867,7 +879,7 @@ Partial Class HomePage
         '
         Me.EmployeePanel.Controls.Add(Me.btnEmplyDGV)
         Me.EmployeePanel.Controls.Add(Me.DataGridEmplyTbl)
-        Me.EmployeePanel.Location = New System.Drawing.Point(227, 151)
+        Me.EmployeePanel.Location = New System.Drawing.Point(217, 115)
         Me.EmployeePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.EmployeePanel.Name = "EmployeePanel"
         Me.EmployeePanel.Size = New System.Drawing.Size(772, 466)
@@ -992,16 +1004,28 @@ Partial Class HomePage
         '
         'PictureBox1
         '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 6)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(396, 54)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.Size = New System.Drawing.Size(411, 92)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(938, 6)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(71, 31)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
         '
         'HomePage
         '
@@ -1009,7 +1033,8 @@ Partial Class HomePage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1063, 671)
+        Me.ClientSize = New System.Drawing.Size(1017, 679)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ChkInPanel)
         Me.Controls.Add(Me.ChkOutPanel)
@@ -1054,6 +1079,7 @@ Partial Class HomePage
         CType(Me.ROOMSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ROOMSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1165,4 +1191,6 @@ Partial Class HomePage
     Friend WithEvents btnChkOutDGV As Button
     Friend WithEvents btnRoomsDGV As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
