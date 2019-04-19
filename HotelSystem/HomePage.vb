@@ -10,10 +10,50 @@ Public Class HomePage
     'Mouse click to move window
     Private m_MoveStartPos As Point
     Private m_MouseDown As Boolean
+    Private DataSet As BindingSource
+    Private DataSet1 As BindingSource
+    Private DataSet2 As BindingSource
+    Private DataSet3 As BindingSource
+    Private DataSet4 As BindingSource
+    Private Single1 As Integer
+    Private Double1 As Integer
+    Private Triple1 As Integer
+    Private Suite1 As Integer
+    Private RoomTotal As Integer
 
     Private Sub RefreshHomeInfo_Click(sender As Object, e As EventArgs) Handles RefreshHomeInfo.Click, PictureBox1.MouseHover
 
         DateLabel.Text = System.DateTime.Now.ToString("dd MMMM yyyy")
+        DataSet = CUSTOMERBindingSource
+        DataSet.Filter = "CHECKIN IS NOT NULL"
+        NumChkInLabel.Text = DataSet.Count
+        DataSet = CUSTOMERBindingSource
+        DataSet.Filter = "CHECKOUT IS NOT NULL"
+        NumChkOutLabel.Text = DataSet.Count
+        DataSet = ROOMSBindingSource2
+        DataSet.Filter = "TYPE = 'single'"
+        Single1 = DataSet.Count
+        DataSet = ROOMSBindingSource2
+        DataSet.Filter = "TYPE = 'double'"
+        Double1 = DataSet.Count
+        DataSet = ROOMSBindingSource2
+        DataSet.Filter = "TYPE = 'triple'"
+        Triple1 = DataSet.Count
+        DataSet = ROOMSBindingSource2
+        DataSet.Filter = "TYPE = 'suite'"
+        Suite1 = DataSet.Count
+        RoomRateLabel.Text = "Singles: " + Single1.ToString() + " Doubles: " + Double1.ToString() + " Triples: " + Triple1.ToString() + " Suites: " + Suite1.ToString()
+        DataSet = ROOMSBindingSource
+        RoomTotal = DataSet.Count
+        DataSet1 = ROOMSBindingSource2
+        DataSet1.Filter = "DATE_OCCUPIED IS NOT NULL"
+        CapacityLabel.Text = DataSet1.Count.ToString() + " / " + RoomTotal.ToString()
+
+
+
+
+
+
     End Sub
 
     Private Sub ResButton_Click(sender As Object, e As EventArgs) Handles ResButton.Click

@@ -34,22 +34,16 @@ Partial Class HomePage
         Me.HomePanel = New System.Windows.Forms.Panel()
         Me.RefreshHomeInfo = New System.Windows.Forms.Button()
         Me.HomeTablePanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.DateLabel = New System.Windows.Forms.Label()
         Me.NumChkInLabel = New System.Windows.Forms.Label()
         Me.NumChkOutLabel = New System.Windows.Forms.Label()
         Me.RoomRateLabel = New System.Windows.Forms.Label()
         Me.CapacityLabel = New System.Windows.Forms.Label()
-        Me.CapacityOOOLabel = New System.Windows.Forms.Label()
-        Me.NumDirtyLabel = New System.Windows.Forms.Label()
-        Me.CleanLabel = New System.Windows.Forms.Label()
         Me.ReservationPanel = New System.Windows.Forms.Panel()
         Me.DataGridCustoTbl = New System.Windows.Forms.DataGridView()
         Me.FIRSTNAMEDataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -70,10 +64,23 @@ Partial Class HomePage
         Me.ChkInPanel = New System.Windows.Forms.Panel()
         Me.btnChkInDGV = New System.Windows.Forms.Button()
         Me.CUSTOMERDataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.CUSTOMERBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ChkOutPanel = New System.Windows.Forms.Panel()
         Me.btnChkOutDGV = New System.Windows.Forms.Button()
         Me.CUSTOMERDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.CUSTOMERBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MaintenancePanel = New System.Windows.Forms.Panel()
         Me.btnRoomsDGV = New System.Windows.Forms.Button()
@@ -81,7 +88,6 @@ Partial Class HomePage
         Me.ROOMDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TYPEDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.COSTDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OCCUPIEDDataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DATEOCCUPIEDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TIMEOCCUPIEDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OCCUPANTIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -109,19 +115,6 @@ Partial Class HomePage
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.HomePanel.SuspendLayout()
         Me.HomeTablePanel.SuspendLayout()
         Me.ReservationPanel.SuspendLayout()
@@ -155,9 +148,10 @@ Partial Class HomePage
         Me.HomeButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.HomeNew
         Me.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.HomeButton.FlatAppearance.BorderSize = 0
-        Me.HomeButton.Location = New System.Drawing.Point(28, 95)
+        Me.HomeButton.Location = New System.Drawing.Point(37, 117)
+        Me.HomeButton.Margin = New System.Windows.Forms.Padding(4)
         Me.HomeButton.Name = "HomeButton"
-        Me.HomeButton.Size = New System.Drawing.Size(105, 61)
+        Me.HomeButton.Size = New System.Drawing.Size(140, 75)
         Me.HomeButton.TabIndex = 0
         Me.HomeButton.UseVisualStyleBackColor = True
         '
@@ -167,9 +161,10 @@ Partial Class HomePage
         Me.ResButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ResButton.FlatAppearance.BorderColor = System.Drawing.Color.Lime
         Me.ResButton.FlatAppearance.BorderSize = 0
-        Me.ResButton.Location = New System.Drawing.Point(28, 161)
+        Me.ResButton.Location = New System.Drawing.Point(37, 198)
+        Me.ResButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ResButton.Name = "ResButton"
-        Me.ResButton.Size = New System.Drawing.Size(105, 61)
+        Me.ResButton.Size = New System.Drawing.Size(140, 75)
         Me.ResButton.TabIndex = 1
         Me.ResButton.UseVisualStyleBackColor = True
         '
@@ -177,9 +172,10 @@ Partial Class HomePage
         '
         Me.CheckInButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.CHEKiNnew
         Me.CheckInButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.CheckInButton.Location = New System.Drawing.Point(28, 228)
+        Me.CheckInButton.Location = New System.Drawing.Point(37, 281)
+        Me.CheckInButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckInButton.Name = "CheckInButton"
-        Me.CheckInButton.Size = New System.Drawing.Size(105, 61)
+        Me.CheckInButton.Size = New System.Drawing.Size(140, 75)
         Me.CheckInButton.TabIndex = 2
         Me.CheckInButton.UseVisualStyleBackColor = True
         '
@@ -187,9 +183,10 @@ Partial Class HomePage
         '
         Me.CheckOutButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.CHKoUTnew
         Me.CheckOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.CheckOutButton.Location = New System.Drawing.Point(28, 296)
+        Me.CheckOutButton.Location = New System.Drawing.Point(37, 364)
+        Me.CheckOutButton.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckOutButton.Name = "CheckOutButton"
-        Me.CheckOutButton.Size = New System.Drawing.Size(105, 61)
+        Me.CheckOutButton.Size = New System.Drawing.Size(140, 75)
         Me.CheckOutButton.TabIndex = 3
         Me.CheckOutButton.UseVisualStyleBackColor = True
         '
@@ -197,9 +194,10 @@ Partial Class HomePage
         '
         Me.MaintenanceButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.MAIN111
         Me.MaintenanceButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MaintenanceButton.Location = New System.Drawing.Point(28, 362)
+        Me.MaintenanceButton.Location = New System.Drawing.Point(37, 446)
+        Me.MaintenanceButton.Margin = New System.Windows.Forms.Padding(4)
         Me.MaintenanceButton.Name = "MaintenanceButton"
-        Me.MaintenanceButton.Size = New System.Drawing.Size(105, 61)
+        Me.MaintenanceButton.Size = New System.Drawing.Size(140, 75)
         Me.MaintenanceButton.TabIndex = 4
         Me.MaintenanceButton.UseVisualStyleBackColor = True
         '
@@ -207,9 +205,10 @@ Partial Class HomePage
         '
         Me.EmployeeButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources.EMPLYbTN
         Me.EmployeeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.EmployeeButton.Location = New System.Drawing.Point(28, 428)
+        Me.EmployeeButton.Location = New System.Drawing.Point(37, 527)
+        Me.EmployeeButton.Margin = New System.Windows.Forms.Padding(4)
         Me.EmployeeButton.Name = "EmployeeButton"
-        Me.EmployeeButton.Size = New System.Drawing.Size(105, 61)
+        Me.EmployeeButton.Size = New System.Drawing.Size(140, 75)
         Me.EmployeeButton.TabIndex = 5
         Me.EmployeeButton.UseVisualStyleBackColor = True
         '
@@ -217,9 +216,10 @@ Partial Class HomePage
         '
         Me.LogoutButton.BackgroundImage = Global.HotelSystem.My.Resources.Resources._EXIT
         Me.LogoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.LogoutButton.Location = New System.Drawing.Point(652, 483)
+        Me.LogoutButton.Location = New System.Drawing.Point(869, 594)
+        Me.LogoutButton.Margin = New System.Windows.Forms.Padding(4)
         Me.LogoutButton.Name = "LogoutButton"
-        Me.LogoutButton.Size = New System.Drawing.Size(105, 61)
+        Me.LogoutButton.Size = New System.Drawing.Size(140, 75)
         Me.LogoutButton.TabIndex = 6
         Me.LogoutButton.UseVisualStyleBackColor = True
         '
@@ -227,17 +227,19 @@ Partial Class HomePage
         '
         Me.HomePanel.Controls.Add(Me.RefreshHomeInfo)
         Me.HomePanel.Controls.Add(Me.HomeTablePanel)
-        Me.HomePanel.Location = New System.Drawing.Point(163, 94)
+        Me.HomePanel.Location = New System.Drawing.Point(217, 116)
+        Me.HomePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.HomePanel.Name = "HomePanel"
-        Me.HomePanel.Size = New System.Drawing.Size(578, 375)
+        Me.HomePanel.Size = New System.Drawing.Size(771, 462)
         Me.HomePanel.TabIndex = 7
         Me.HomePanel.Visible = False
         '
         'RefreshHomeInfo
         '
-        Me.RefreshHomeInfo.Location = New System.Drawing.Point(293, 258)
+        Me.RefreshHomeInfo.Location = New System.Drawing.Point(391, 318)
+        Me.RefreshHomeInfo.Margin = New System.Windows.Forms.Padding(4)
         Me.RefreshHomeInfo.Name = "RefreshHomeInfo"
-        Me.RefreshHomeInfo.Size = New System.Drawing.Size(201, 23)
+        Me.RefreshHomeInfo.Size = New System.Drawing.Size(268, 28)
         Me.RefreshHomeInfo.TabIndex = 1
         Me.RefreshHomeInfo.Text = "Get Today's Information"
         Me.RefreshHomeInfo.UseVisualStyleBackColor = True
@@ -247,25 +249,20 @@ Partial Class HomePage
         Me.HomeTablePanel.ColumnCount = 2
         Me.HomeTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.HomeTablePanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.HomeTablePanel.Controls.Add(Me.Label5, 0, 5)
         Me.HomeTablePanel.Controls.Add(Me.Label4, 0, 4)
         Me.HomeTablePanel.Controls.Add(Me.Label3, 0, 3)
         Me.HomeTablePanel.Controls.Add(Me.Label2, 0, 2)
         Me.HomeTablePanel.Controls.Add(Me.Label1, 0, 1)
         Me.HomeTablePanel.Controls.Add(Me.Label7, 0, 0)
-        Me.HomeTablePanel.Controls.Add(Me.Label6, 0, 7)
-        Me.HomeTablePanel.Controls.Add(Me.Label8, 0, 6)
         Me.HomeTablePanel.Controls.Add(Me.DateLabel, 1, 0)
         Me.HomeTablePanel.Controls.Add(Me.NumChkInLabel, 1, 1)
         Me.HomeTablePanel.Controls.Add(Me.NumChkOutLabel, 1, 2)
         Me.HomeTablePanel.Controls.Add(Me.RoomRateLabel, 1, 3)
         Me.HomeTablePanel.Controls.Add(Me.CapacityLabel, 1, 4)
-        Me.HomeTablePanel.Controls.Add(Me.CapacityOOOLabel, 1, 5)
-        Me.HomeTablePanel.Controls.Add(Me.NumDirtyLabel, 1, 6)
-        Me.HomeTablePanel.Controls.Add(Me.CleanLabel, 1, 7)
-        Me.HomeTablePanel.Location = New System.Drawing.Point(81, 76)
+        Me.HomeTablePanel.Location = New System.Drawing.Point(73, 82)
+        Me.HomeTablePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.HomeTablePanel.Name = "HomeTablePanel"
-        Me.HomeTablePanel.RowCount = 8
+        Me.HomeTablePanel.RowCount = 5
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
@@ -274,52 +271,47 @@ Partial Class HomePage
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
-        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.HomeTablePanel.Size = New System.Drawing.Size(413, 163)
+        Me.HomeTablePanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
+        Me.HomeTablePanel.Size = New System.Drawing.Size(615, 201)
         Me.HomeTablePanel.TabIndex = 0
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(3, 100)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(127, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Capacity w/ OOO Rooms"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 80)
+        Me.Label4.Location = New System.Drawing.Point(4, 160)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 13)
+        Me.Label4.Size = New System.Drawing.Size(62, 17)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Capacity"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 60)
+        Me.Label3.Location = New System.Drawing.Point(4, 120)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.Size = New System.Drawing.Size(79, 17)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Room Rate"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 40)
+        Me.Label2.Location = New System.Drawing.Point(4, 80)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 13)
+        Me.Label2.Size = New System.Drawing.Size(150, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Check-outs Remaining"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 20)
+        Me.Label1.Location = New System.Drawing.Point(4, 40)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 13)
+        Me.Label1.Size = New System.Drawing.Size(154, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Check-ins Guaranteed "
         '
@@ -327,109 +319,71 @@ Partial Class HomePage
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(3, 0)
+        Me.Label7.Location = New System.Drawing.Point(4, 0)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(93, 13)
+        Me.Label7.Size = New System.Drawing.Size(117, 17)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Hotel Statistics"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 140)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(116, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Clean Rooms Available"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(3, 120)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(64, 13)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Dirty Rooms"
         '
         'DateLabel
         '
         Me.DateLabel.AutoSize = True
         Me.DateLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateLabel.Location = New System.Drawing.Point(209, 0)
+        Me.DateLabel.Location = New System.Drawing.Point(311, 0)
+        Me.DateLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DateLabel.Name = "DateLabel"
-        Me.DateLabel.Size = New System.Drawing.Size(32, 13)
+        Me.DateLabel.Size = New System.Drawing.Size(40, 17)
         Me.DateLabel.TabIndex = 8
         Me.DateLabel.Text = "GET"
         '
         'NumChkInLabel
         '
         Me.NumChkInLabel.AutoSize = True
-        Me.NumChkInLabel.Location = New System.Drawing.Point(209, 20)
+        Me.NumChkInLabel.Location = New System.Drawing.Point(311, 40)
+        Me.NumChkInLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.NumChkInLabel.Name = "NumChkInLabel"
-        Me.NumChkInLabel.Size = New System.Drawing.Size(29, 13)
+        Me.NumChkInLabel.Size = New System.Drawing.Size(37, 17)
         Me.NumChkInLabel.TabIndex = 9
         Me.NumChkInLabel.Text = "GET"
         '
         'NumChkOutLabel
         '
         Me.NumChkOutLabel.AutoSize = True
-        Me.NumChkOutLabel.Location = New System.Drawing.Point(209, 40)
+        Me.NumChkOutLabel.Location = New System.Drawing.Point(311, 80)
+        Me.NumChkOutLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.NumChkOutLabel.Name = "NumChkOutLabel"
-        Me.NumChkOutLabel.Size = New System.Drawing.Size(29, 13)
+        Me.NumChkOutLabel.Size = New System.Drawing.Size(37, 17)
         Me.NumChkOutLabel.TabIndex = 10
         Me.NumChkOutLabel.Text = "GET"
         '
         'RoomRateLabel
         '
         Me.RoomRateLabel.AutoSize = True
-        Me.RoomRateLabel.Location = New System.Drawing.Point(209, 60)
+        Me.RoomRateLabel.Location = New System.Drawing.Point(311, 120)
+        Me.RoomRateLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.RoomRateLabel.Name = "RoomRateLabel"
-        Me.RoomRateLabel.Size = New System.Drawing.Size(29, 13)
+        Me.RoomRateLabel.Size = New System.Drawing.Size(37, 17)
         Me.RoomRateLabel.TabIndex = 11
         Me.RoomRateLabel.Text = "GET"
         '
         'CapacityLabel
         '
         Me.CapacityLabel.AutoSize = True
-        Me.CapacityLabel.Location = New System.Drawing.Point(209, 80)
+        Me.CapacityLabel.Location = New System.Drawing.Point(311, 160)
+        Me.CapacityLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.CapacityLabel.Name = "CapacityLabel"
-        Me.CapacityLabel.Size = New System.Drawing.Size(29, 13)
+        Me.CapacityLabel.Size = New System.Drawing.Size(37, 17)
         Me.CapacityLabel.TabIndex = 12
         Me.CapacityLabel.Text = "GET"
-        '
-        'CapacityOOOLabel
-        '
-        Me.CapacityOOOLabel.AutoSize = True
-        Me.CapacityOOOLabel.Location = New System.Drawing.Point(209, 100)
-        Me.CapacityOOOLabel.Name = "CapacityOOOLabel"
-        Me.CapacityOOOLabel.Size = New System.Drawing.Size(29, 13)
-        Me.CapacityOOOLabel.TabIndex = 13
-        Me.CapacityOOOLabel.Text = "GET"
-        '
-        'NumDirtyLabel
-        '
-        Me.NumDirtyLabel.AutoSize = True
-        Me.NumDirtyLabel.Location = New System.Drawing.Point(209, 120)
-        Me.NumDirtyLabel.Name = "NumDirtyLabel"
-        Me.NumDirtyLabel.Size = New System.Drawing.Size(29, 13)
-        Me.NumDirtyLabel.TabIndex = 14
-        Me.NumDirtyLabel.Text = "GET"
-        '
-        'CleanLabel
-        '
-        Me.CleanLabel.AutoSize = True
-        Me.CleanLabel.Location = New System.Drawing.Point(209, 140)
-        Me.CleanLabel.Name = "CleanLabel"
-        Me.CleanLabel.Size = New System.Drawing.Size(29, 13)
-        Me.CleanLabel.TabIndex = 15
-        Me.CleanLabel.Text = "GET"
         '
         'ReservationPanel
         '
         Me.ReservationPanel.Controls.Add(Me.DataGridCustoTbl)
-        Me.ReservationPanel.Location = New System.Drawing.Point(164, 94)
+        Me.ReservationPanel.Location = New System.Drawing.Point(219, 116)
+        Me.ReservationPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ReservationPanel.Name = "ReservationPanel"
-        Me.ReservationPanel.Size = New System.Drawing.Size(578, 375)
+        Me.ReservationPanel.Size = New System.Drawing.Size(771, 462)
         Me.ReservationPanel.TabIndex = 2
         Me.ReservationPanel.Visible = False
         '
@@ -440,10 +394,10 @@ Partial Class HomePage
         Me.DataGridCustoTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FIRSTNAMEDataGridViewTextBoxColumn3, Me.LASTNAMEDataGridViewTextBoxColumn3, Me.CUSTIDDataGridViewTextBoxColumn2, Me.DAYSDataGridViewTextBoxColumn2, Me.GUESTSDataGridViewTextBoxColumn2, Me.CHECKINDataGridViewTextBoxColumn2, Me.CHECKOUTDataGridViewTextBoxColumn2, Me.TIMEINDataGridViewTextBoxColumn2, Me.TIMEOUTDataGridViewTextBoxColumn2, Me.DATEOFORDERDataGridViewTextBoxColumn2, Me.TOTALCOSTDataGridViewTextBoxColumn2, Me.PAIDDataGridViewCheckBoxColumn2})
         Me.DataGridCustoTbl.DataSource = Me.CUSTOMERBindingSource
         Me.DataGridCustoTbl.Location = New System.Drawing.Point(-1, -1)
-        Me.DataGridCustoTbl.Margin = New System.Windows.Forms.Padding(2)
+        Me.DataGridCustoTbl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridCustoTbl.Name = "DataGridCustoTbl"
         Me.DataGridCustoTbl.RowTemplate.Height = 24
-        Me.DataGridCustoTbl.Size = New System.Drawing.Size(578, 334)
+        Me.DataGridCustoTbl.Size = New System.Drawing.Size(771, 411)
         Me.DataGridCustoTbl.TabIndex = 0
         '
         'FIRSTNAMEDataGridViewTextBoxColumn3
@@ -537,17 +491,18 @@ Partial Class HomePage
         '
         Me.ChkInPanel.Controls.Add(Me.btnChkInDGV)
         Me.ChkInPanel.Controls.Add(Me.CUSTOMERDataGridView1)
-        Me.ChkInPanel.Location = New System.Drawing.Point(162, 95)
+        Me.ChkInPanel.Location = New System.Drawing.Point(216, 117)
+        Me.ChkInPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkInPanel.Name = "ChkInPanel"
-        Me.ChkInPanel.Size = New System.Drawing.Size(580, 379)
+        Me.ChkInPanel.Size = New System.Drawing.Size(773, 466)
         Me.ChkInPanel.TabIndex = 0
         '
         'btnChkInDGV
         '
-        Me.btnChkInDGV.Location = New System.Drawing.Point(0, 318)
-        Me.btnChkInDGV.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnChkInDGV.Location = New System.Drawing.Point(0, 391)
+        Me.btnChkInDGV.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnChkInDGV.Name = "btnChkInDGV"
-        Me.btnChkInDGV.Size = New System.Drawing.Size(576, 32)
+        Me.btnChkInDGV.Size = New System.Drawing.Size(768, 39)
         Me.btnChkInDGV.TabIndex = 17
         Me.btnChkInDGV.Text = "Add New Entry"
         Me.btnChkInDGV.UseVisualStyleBackColor = True
@@ -563,9 +518,52 @@ Partial Class HomePage
         Me.CUSTOMERDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn22, Me.DataGridViewCheckBoxColumn2})
         Me.CUSTOMERDataGridView1.DataSource = Me.CUSTOMERBindingSource2
         Me.CUSTOMERDataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.CUSTOMERDataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.CUSTOMERDataGridView1.Name = "CUSTOMERDataGridView1"
-        Me.CUSTOMERDataGridView1.Size = New System.Drawing.Size(576, 314)
+        Me.CUSTOMERDataGridView1.Size = New System.Drawing.Size(768, 386)
         Me.CUSTOMERDataGridView1.TabIndex = 1
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "LAST_NAME"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "LAST_NAME"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "CUST_ID#"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "CUST_ID#"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.DataPropertyName = "DAYS"
+        Me.DataGridViewTextBoxColumn15.HeaderText = "DAYS"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "CHECKIN"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "CHECKIN"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        Me.DataGridViewTextBoxColumn19.DataPropertyName = "TIME_IN"
+        Me.DataGridViewTextBoxColumn19.HeaderText = "TIME_IN"
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.DataPropertyName = "TOTAL_COST"
+        Me.DataGridViewTextBoxColumn22.HeaderText = "TOTAL_COST"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        '
+        'DataGridViewCheckBoxColumn2
+        '
+        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "PAID"
+        Me.DataGridViewCheckBoxColumn2.HeaderText = "PAID"
+        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
         '
         'CUSTOMERBindingSource2
         '
@@ -576,18 +574,19 @@ Partial Class HomePage
         '
         Me.ChkOutPanel.Controls.Add(Me.btnChkOutDGV)
         Me.ChkOutPanel.Controls.Add(Me.CUSTOMERDataGridView)
-        Me.ChkOutPanel.Location = New System.Drawing.Point(162, 93)
+        Me.ChkOutPanel.Location = New System.Drawing.Point(216, 114)
+        Me.ChkOutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkOutPanel.Name = "ChkOutPanel"
-        Me.ChkOutPanel.Size = New System.Drawing.Size(595, 384)
+        Me.ChkOutPanel.Size = New System.Drawing.Size(793, 473)
         Me.ChkOutPanel.TabIndex = 0
         Me.ChkOutPanel.Visible = False
         '
         'btnChkOutDGV
         '
-        Me.btnChkOutDGV.Location = New System.Drawing.Point(2, 335)
-        Me.btnChkOutDGV.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnChkOutDGV.Location = New System.Drawing.Point(3, 412)
+        Me.btnChkOutDGV.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnChkOutDGV.Name = "btnChkOutDGV"
-        Me.btnChkOutDGV.Size = New System.Drawing.Size(576, 32)
+        Me.btnChkOutDGV.Size = New System.Drawing.Size(768, 39)
         Me.btnChkOutDGV.TabIndex = 17
         Me.btnChkOutDGV.Text = "Add New Entry"
         Me.btnChkOutDGV.UseVisualStyleBackColor = True
@@ -599,10 +598,47 @@ Partial Class HomePage
         Me.CUSTOMERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CUSTOMERDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn9, Me.DataGridViewCheckBoxColumn1})
         Me.CUSTOMERDataGridView.DataSource = Me.CUSTOMERBindingSource1
-        Me.CUSTOMERDataGridView.Location = New System.Drawing.Point(3, 3)
+        Me.CUSTOMERDataGridView.Location = New System.Drawing.Point(4, 4)
+        Me.CUSTOMERDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.CUSTOMERDataGridView.Name = "CUSTOMERDataGridView"
-        Me.CUSTOMERDataGridView.Size = New System.Drawing.Size(577, 328)
+        Me.CUSTOMERDataGridView.Size = New System.Drawing.Size(769, 404)
         Me.CUSTOMERDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "LAST_NAME"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "LAST_NAME"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "CUST_ID#"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "CUST_ID#"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "DAYS"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "DAYS"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "CHECKOUT"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "CHECKOUT"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "TIME_OUT"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "TIME_OUT"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "PAID"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "PAID"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
         '
         'CUSTOMERBindingSource1
         '
@@ -613,18 +649,19 @@ Partial Class HomePage
         '
         Me.MaintenancePanel.Controls.Add(Me.btnRoomsDGV)
         Me.MaintenancePanel.Controls.Add(Me.DataGridMaintenanceTbl)
-        Me.MaintenancePanel.Location = New System.Drawing.Point(163, 96)
+        Me.MaintenancePanel.Location = New System.Drawing.Point(217, 118)
+        Me.MaintenancePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.MaintenancePanel.Name = "MaintenancePanel"
-        Me.MaintenancePanel.Size = New System.Drawing.Size(579, 374)
+        Me.MaintenancePanel.Size = New System.Drawing.Size(772, 460)
         Me.MaintenancePanel.TabIndex = 0
         Me.MaintenancePanel.Visible = False
         '
         'btnRoomsDGV
         '
-        Me.btnRoomsDGV.Location = New System.Drawing.Point(2, 331)
-        Me.btnRoomsDGV.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnRoomsDGV.Location = New System.Drawing.Point(3, 407)
+        Me.btnRoomsDGV.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRoomsDGV.Name = "btnRoomsDGV"
-        Me.btnRoomsDGV.Size = New System.Drawing.Size(576, 32)
+        Me.btnRoomsDGV.Size = New System.Drawing.Size(768, 39)
         Me.btnRoomsDGV.TabIndex = 17
         Me.btnRoomsDGV.Text = "Add New Entry"
         Me.btnRoomsDGV.UseVisualStyleBackColor = True
@@ -633,13 +670,13 @@ Partial Class HomePage
         '
         Me.DataGridMaintenanceTbl.AutoGenerateColumns = False
         Me.DataGridMaintenanceTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridMaintenanceTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ROOMDataGridViewTextBoxColumn1, Me.TYPEDataGridViewTextBoxColumn1, Me.COSTDataGridViewTextBoxColumn1, Me.OCCUPIEDDataGridViewCheckBoxColumn1, Me.DATEOCCUPIEDDataGridViewTextBoxColumn1, Me.TIMEOCCUPIEDDataGridViewTextBoxColumn1, Me.OCCUPANTIDDataGridViewTextBoxColumn1})
+        Me.DataGridMaintenanceTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ROOMDataGridViewTextBoxColumn1, Me.TYPEDataGridViewTextBoxColumn1, Me.COSTDataGridViewTextBoxColumn1, Me.DATEOCCUPIEDDataGridViewTextBoxColumn1, Me.TIMEOCCUPIEDDataGridViewTextBoxColumn1, Me.OCCUPANTIDDataGridViewTextBoxColumn1})
         Me.DataGridMaintenanceTbl.DataSource = Me.ROOMSBindingSource2
         Me.DataGridMaintenanceTbl.Location = New System.Drawing.Point(0, -1)
-        Me.DataGridMaintenanceTbl.Margin = New System.Windows.Forms.Padding(2)
+        Me.DataGridMaintenanceTbl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridMaintenanceTbl.Name = "DataGridMaintenanceTbl"
         Me.DataGridMaintenanceTbl.RowTemplate.Height = 24
-        Me.DataGridMaintenanceTbl.Size = New System.Drawing.Size(578, 328)
+        Me.DataGridMaintenanceTbl.Size = New System.Drawing.Size(771, 404)
         Me.DataGridMaintenanceTbl.TabIndex = 0
         '
         'ROOMDataGridViewTextBoxColumn1
@@ -659,12 +696,6 @@ Partial Class HomePage
         Me.COSTDataGridViewTextBoxColumn1.DataPropertyName = "COST"
         Me.COSTDataGridViewTextBoxColumn1.HeaderText = "COST"
         Me.COSTDataGridViewTextBoxColumn1.Name = "COSTDataGridViewTextBoxColumn1"
-        '
-        'OCCUPIEDDataGridViewCheckBoxColumn1
-        '
-        Me.OCCUPIEDDataGridViewCheckBoxColumn1.DataPropertyName = "OCCUPIED"
-        Me.OCCUPIEDDataGridViewCheckBoxColumn1.HeaderText = "OCCUPIED"
-        Me.OCCUPIEDDataGridViewCheckBoxColumn1.Name = "OCCUPIEDDataGridViewCheckBoxColumn1"
         '
         'DATEOCCUPIEDDataGridViewTextBoxColumn1
         '
@@ -693,17 +724,18 @@ Partial Class HomePage
         '
         Me.EmployeePanel.Controls.Add(Me.btnEmplyDGV)
         Me.EmployeePanel.Controls.Add(Me.DataGridEmplyTbl)
-        Me.EmployeePanel.Location = New System.Drawing.Point(163, 93)
+        Me.EmployeePanel.Location = New System.Drawing.Point(217, 114)
+        Me.EmployeePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.EmployeePanel.Name = "EmployeePanel"
-        Me.EmployeePanel.Size = New System.Drawing.Size(579, 379)
+        Me.EmployeePanel.Size = New System.Drawing.Size(772, 466)
         Me.EmployeePanel.TabIndex = 0
         '
         'btnEmplyDGV
         '
-        Me.btnEmplyDGV.Location = New System.Drawing.Point(2, 337)
-        Me.btnEmplyDGV.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEmplyDGV.Location = New System.Drawing.Point(3, 415)
+        Me.btnEmplyDGV.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEmplyDGV.Name = "btnEmplyDGV"
-        Me.btnEmplyDGV.Size = New System.Drawing.Size(576, 32)
+        Me.btnEmplyDGV.Size = New System.Drawing.Size(768, 39)
         Me.btnEmplyDGV.TabIndex = 16
         Me.btnEmplyDGV.Text = "Add New Entry"
         Me.btnEmplyDGV.UseVisualStyleBackColor = True
@@ -715,10 +747,10 @@ Partial Class HomePage
         Me.DataGridEmplyTbl.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FIRSTNAMEDataGridViewTextBoxColumn, Me.LASTNAMEDataGridViewTextBoxColumn, Me.SSNDataGridViewTextBoxColumn, Me.PHONEDataGridViewTextBoxColumn, Me.TITLEDataGridViewTextBoxColumn, Me.DEPTDataGridViewTextBoxColumn, Me.PAYHRLYDataGridViewTextBoxColumn})
         Me.DataGridEmplyTbl.DataSource = Me.EMPLOYEEBindingSource3
         Me.DataGridEmplyTbl.Location = New System.Drawing.Point(0, 1)
-        Me.DataGridEmplyTbl.Margin = New System.Windows.Forms.Padding(2)
+        Me.DataGridEmplyTbl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridEmplyTbl.Name = "DataGridEmplyTbl"
         Me.DataGridEmplyTbl.RowTemplate.Height = 24
-        Me.DataGridEmplyTbl.Size = New System.Drawing.Size(578, 333)
+        Me.DataGridEmplyTbl.Size = New System.Drawing.Size(771, 410)
         Me.DataGridEmplyTbl.TabIndex = 0
         '
         'FIRSTNAMEDataGridViewTextBoxColumn
@@ -821,10 +853,10 @@ Partial Class HomePage
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Image = Global.HotelSystem.My.Resources.Resources.LogoNEW
         Me.PictureBox1.InitialImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 6)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(228, 54)
+        Me.PictureBox1.Size = New System.Drawing.Size(303, 66)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
@@ -834,107 +866,29 @@ Partial Class HomePage
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox2.Image = Global.HotelSystem.My.Resources.Resources.ximg
-        Me.PictureBox2.Location = New System.Drawing.Point(704, 5)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Location = New System.Drawing.Point(939, 6)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(54, 26)
+        Me.PictureBox2.Size = New System.Drawing.Size(71, 32)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
         '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "LAST_NAME"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "LAST_NAME"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "CUST_ID#"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "CUST_ID#"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "DAYS"
-        Me.DataGridViewTextBoxColumn15.HeaderText = "DAYS"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.DataPropertyName = "CHECKIN"
-        Me.DataGridViewTextBoxColumn17.HeaderText = "CHECKIN"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        '
-        'DataGridViewTextBoxColumn19
-        '
-        Me.DataGridViewTextBoxColumn19.DataPropertyName = "TIME_IN"
-        Me.DataGridViewTextBoxColumn19.HeaderText = "TIME_IN"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        '
-        'DataGridViewTextBoxColumn22
-        '
-        Me.DataGridViewTextBoxColumn22.DataPropertyName = "TOTAL_COST"
-        Me.DataGridViewTextBoxColumn22.HeaderText = "TOTAL_COST"
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        '
-        'DataGridViewCheckBoxColumn2
-        '
-        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "PAID"
-        Me.DataGridViewCheckBoxColumn2.HeaderText = "PAID"
-        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "LAST_NAME"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "LAST_NAME"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "CUST_ID#"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "CUST_ID#"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "DAYS"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "DAYS"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "CHECKOUT"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "CHECKOUT"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "TIME_OUT"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "TIME_OUT"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "PAID"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "PAID"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        '
         'HomePage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(763, 552)
+        Me.ClientSize = New System.Drawing.Size(1017, 679)
+        Me.Controls.Add(Me.MaintenancePanel)
+        Me.Controls.Add(Me.HomePanel)
         Me.Controls.Add(Me.ChkOutPanel)
         Me.Controls.Add(Me.ChkInPanel)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.EmployeePanel)
-        Me.Controls.Add(Me.MaintenancePanel)
         Me.Controls.Add(Me.ReservationPanel)
-        Me.Controls.Add(Me.HomePanel)
         Me.Controls.Add(Me.LogoutButton)
         Me.Controls.Add(Me.EmployeeButton)
         Me.Controls.Add(Me.MaintenanceButton)
@@ -943,6 +897,7 @@ Partial Class HomePage
         Me.Controls.Add(Me.ResButton)
         Me.Controls.Add(Me.HomeButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "HomePage"
         Me.Text = "Home"
         Me.HomePanel.ResumeLayout(False)
@@ -986,22 +941,16 @@ Partial Class HomePage
     Friend WithEvents HomePanel As Panel
     Friend WithEvents HomeTablePanel As TableLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents DateLabel As Label
     Friend WithEvents RefreshHomeInfo As Button
     Friend WithEvents NumChkInLabel As Label
     Friend WithEvents NumChkOutLabel As Label
     Friend WithEvents RoomRateLabel As Label
     Friend WithEvents CapacityLabel As Label
-    Friend WithEvents CapacityOOOLabel As Label
-    Friend WithEvents NumDirtyLabel As Label
-    Friend WithEvents CleanLabel As Label
     Friend WithEvents ReservationPanel As Panel
     Friend WithEvents HOTEL_DBDataSet As HOTEL_DBDataSet
     Friend WithEvents ROOMSBindingSource As BindingSource
